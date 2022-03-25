@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsOpenOrders" targetNamespace="http://tempuri.org/dsOpenOrders.xsd" xmlns:mstns="http://tempuri.org/dsOpenOrders.xsd" xmlns="http://tempuri.org/dsOpenOrders.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsOpenOrders" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsOpenOrders" msprop:Generator_UserDSName="dsOpenOrders">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtOpenOrder" msprop:Generator_UserTableName="dtOpenOrder" msprop:Generator_RowEvArgName="dtOpenOrderRowChangeEvent" msprop:Generator_TableVarName="tabledtOpenOrder" msprop:Generator_TablePropName="dtOpenOrder" msprop:Generator_RowDeletingName="dtOpenOrderRowDeleting" msprop:Generator_RowChangingName="dtOpenOrderRowChanging" msprop:Generator_RowDeletedName="dtOpenOrderRowDeleted" msprop:Generator_TableClassName="dtOpenOrderDataTable" msprop:Generator_RowChangedName="dtOpenOrderRowChanged" msprop:Generator_RowEvHandlerName="dtOpenOrderRowChangeEventHandler" msprop:Generator_RowClassName="dtOpenOrderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustomerCode" msprop:Generator_ColumnVarNameInTable="columnCustomerCode" msprop:Generator_ColumnPropNameInRow="CustomerCode" msprop:Generator_ColumnPropNameInTable="CustomerCodeColumn" msprop:Generator_UserColumnName="CustomerCode" type="xs:string" minOccurs="0" />
+              <xs:element name="DocumentNumber" msprop:Generator_ColumnVarNameInTable="columnDocumentNumber" msprop:Generator_ColumnPropNameInRow="DocumentNumber" msprop:Generator_ColumnPropNameInTable="DocumentNumberColumn" msprop:Generator_UserColumnName="DocumentNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="DocumentDate" msprop:Generator_ColumnVarNameInTable="columnDocumentDate" msprop:Generator_ColumnPropNameInRow="DocumentDate" msprop:Generator_ColumnPropNameInTable="DocumentDateColumn" msprop:Generator_UserColumnName="DocumentDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OrderNumber" msprop:Generator_ColumnVarNameInTable="columnOrderNumber" msprop:Generator_ColumnPropNameInRow="OrderNumber" msprop:Generator_ColumnPropNameInTable="OrderNumberColumn" msprop:Generator_UserColumnName="OrderNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="SalesmanCode" msprop:Generator_ColumnVarNameInTable="columnSalesmanCode" msprop:Generator_ColumnPropNameInRow="SalesmanCode" msprop:Generator_ColumnPropNameInTable="SalesmanCodeColumn" msprop:Generator_UserColumnName="SalesmanCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LastInvoiceDate" msprop:Generator_ColumnVarNameInTable="columnLastInvoiceDate" msprop:Generator_ColumnPropNameInRow="LastInvoiceDate" msprop:Generator_ColumnPropNameInTable="LastInvoiceDateColumn" msprop:Generator_UserColumnName="LastInvoiceDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

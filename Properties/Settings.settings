@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Liquid.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Connection" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">aaaaa</Value>
+    </Setting>
+    <Setting Name="Liquid_admin_pc_TransferManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://admin-pc/Liquid/TransferManager.asmx</Value>
+    </Setting>
+    <Setting Name="Liquid_localhost_TransferManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/Liquid/TransferManager.asmx</Value>
+    </Setting>
+    <Setting Name="Liquid_xp_server_TransferManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.0.0.95/liquid/TransferManager.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

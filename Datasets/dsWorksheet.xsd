@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsWorksheet" targetNamespace="http://tempuri.org/dsWorksheet.xsd" xmlns:mstns="http://tempuri.org/dsWorksheet.xsd" xmlns="http://tempuri.org/dsWorksheet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsWorksheet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsWorksheet" msprop:Generator_DataSetName="dsWorksheet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtWorksheet" msprop:Generator_UserTableName="dtWorksheet" msprop:Generator_RowDeletedName="dtWorksheetRowDeleted" msprop:Generator_RowChangedName="dtWorksheetRowChanged" msprop:Generator_RowClassName="dtWorksheetRow" msprop:Generator_RowChangingName="dtWorksheetRowChanging" msprop:Generator_RowEvArgName="dtWorksheetRowChangeEvent" msprop:Generator_RowEvHandlerName="dtWorksheetRowChangeEventHandler" msprop:Generator_TableClassName="dtWorksheetDataTable" msprop:Generator_TableVarName="tabledtWorksheet" msprop:Generator_RowDeletingName="dtWorksheetRowDeleting" msprop:Generator_TablePropName="dtWorksheet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserName" msprop:Generator_UserColumnName="UserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DateTime" msprop:Generator_UserColumnName="DateTime" msprop:Generator_ColumnPropNameInRow="DateTime" msprop:Generator_ColumnVarNameInTable="columnDateTime" msprop:Generator_ColumnPropNameInTable="DateTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RawBatchName" msprop:Generator_UserColumnName="RawBatchName" msprop:Generator_ColumnPropNameInRow="RawBatchName" msprop:Generator_ColumnVarNameInTable="columnRawBatchName" msprop:Generator_ColumnPropNameInTable="RawBatchNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BarcodeID" msprop:Generator_UserColumnName="BarcodeID" msprop:Generator_ColumnVarNameInTable="columnBarcodeID" msprop:Generator_ColumnPropNameInRow="BarcodeID" msprop:Generator_ColumnPropNameInTable="BarcodeIDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

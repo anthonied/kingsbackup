@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Liquid</id>
+    <title>Liquid</title>
+    <version>0.00</version>
+    <authors>$Anthonie de Klerk$</authors>
+    <owners>Solutionserver</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Liquid</description>
+  </metadata>
+  <files>
+	  <file src="bin\Release\Liquid.exe" target=""/>
+	  <file src="bin\Release\Liquid.Services.dll" target=""/>
+	  <file src="bin\Release\Liquid.Repository.dll" target=""/>
+	  <file src="bin\Release\Liquid.CommRepository.dll" target=""/>
+	  <file src="bin\Release\Liquid.Coms.Scanner.dll" target=""/>
+	  <file src="bin\Release\Liquid.Domain.dll" target=""/>
+	  <file src="bin\Release\Solsage Pastel API.dll" target=""/>
+  </files>
+</package>

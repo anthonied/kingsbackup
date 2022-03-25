@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsDailyTurnover" targetNamespace="http://tempuri.org/dsDailyTurnover.xsd" xmlns:mstns="http://tempuri.org/dsDailyTurnover.xsd" xmlns="http://tempuri.org/dsDailyTurnover.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsDailyTurnover" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsDailyTurnover" msprop:Generator_UserDSName="dsDailyTurnover">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtDailyTurnover" msprop:Generator_TableClassName="dtDailyTurnoverDataTable" msprop:Generator_TableVarName="tabledtDailyTurnover" msprop:Generator_TablePropName="dtDailyTurnover" msprop:Generator_RowDeletingName="dtDailyTurnoverRowDeleting" msprop:Generator_UserTableName="dtDailyTurnover" msprop:Generator_RowChangingName="dtDailyTurnoverRowChanging" msprop:Generator_RowEvHandlerName="dtDailyTurnoverRowChangeEventHandler" msprop:Generator_RowDeletedName="dtDailyTurnoverRowDeleted" msprop:Generator_RowEvArgName="dtDailyTurnoverRowChangeEvent" msprop:Generator_RowChangedName="dtDailyTurnoverRowChanged" msprop:Generator_RowClassName="dtDailyTurnoverRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCode" msprop:Generator_ColumnVarNameInTable="columnItemCode" msprop:Generator_ColumnPropNameInRow="ItemCode" msprop:Generator_ColumnPropNameInTable="ItemCodeColumn" msprop:Generator_UserColumnName="ItemCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:string" minOccurs="0" />
+              <xs:element name="DayTurnover" msprop:Generator_ColumnVarNameInTable="columnDayTurnover" msprop:Generator_ColumnPropNameInRow="DayTurnover" msprop:Generator_ColumnPropNameInTable="DayTurnoverColumn" msprop:Generator_UserColumnName="DayTurnover" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemPrice" msprop:Generator_ColumnVarNameInTable="columnItemPrice" msprop:Generator_ColumnPropNameInRow="ItemPrice" msprop:Generator_ColumnPropNameInTable="ItemPriceColumn" msprop:Generator_UserColumnName="ItemPrice" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

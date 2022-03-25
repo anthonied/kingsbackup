@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsProductionFigures" targetNamespace="http://tempuri.org/dsProductionFigures.xsd" xmlns:mstns="http://tempuri.org/dsProductionFigures.xsd" xmlns="http://tempuri.org/dsProductionFigures.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsProductionFigures" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsProductionFigures" msprop:Generator_UserDSName="dsProductionFigures">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtProductionFigures" msprop:Generator_TableClassName="dtProductionFiguresDataTable" msprop:Generator_TableVarName="tabledtProductionFigures" msprop:Generator_TablePropName="dtProductionFigures" msprop:Generator_RowDeletingName="dtProductionFiguresRowDeleting" msprop:Generator_UserTableName="dtProductionFigures" msprop:Generator_RowChangingName="dtProductionFiguresRowChanging" msprop:Generator_RowEvHandlerName="dtProductionFiguresRowChangeEventHandler" msprop:Generator_RowDeletedName="dtProductionFiguresRowDeleted" msprop:Generator_RowEvArgName="dtProductionFiguresRowChangeEvent" msprop:Generator_RowChangedName="dtProductionFiguresRowChanged" msprop:Generator_RowClassName="dtProductionFiguresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DocNumber" msprop:Generator_ColumnVarNameInTable="columnDocNumber" msprop:Generator_ColumnPropNameInRow="DocNumber" msprop:Generator_ColumnPropNameInTable="DocNumberColumn" msprop:Generator_UserColumnName="DocNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="BatchNumber" msprop:Generator_ColumnVarNameInTable="columnBatchNumber" msprop:Generator_ColumnPropNameInRow="BatchNumber" msprop:Generator_ColumnPropNameInTable="BatchNumberColumn" msprop:Generator_UserColumnName="BatchNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemCode" msprop:Generator_ColumnVarNameInTable="columnItemCode" msprop:Generator_ColumnPropNameInRow="ItemCode" msprop:Generator_ColumnPropNameInTable="ItemCodeColumn" msprop:Generator_UserColumnName="ItemCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PDescription" msprop:Generator_ColumnVarNameInTable="columnPDescription" msprop:Generator_ColumnPropNameInRow="PDescription" msprop:Generator_ColumnPropNameInTable="PDescriptionColumn" msprop:Generator_UserColumnName="PDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="DateTimeStamp" msprop:Generator_ColumnVarNameInTable="columnDateTimeStamp" msprop:Generator_ColumnPropNameInRow="DateTimeStamp" msprop:Generator_ColumnPropNameInTable="DateTimeStampColumn" msprop:Generator_UserColumnName="DateTimeStamp" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

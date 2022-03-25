@@ -1,0 +1,113 @@
+
+//////////////////////////////////
+Programing Notes
+/////////////////////////////////
+~~~~~~~~~~~~~~~~~~~~~~
+  Sales Order Status
+~~~~~~~~~~~~~~~~~~~~~~
+0 - New Order
+1 - Saved Order
+2 - Partialy Invoiced Order
+3 - Closed Order
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Generate.cs buildaSalesLine(iInstruction)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0 - Normal sales Line
+1 - DownTime Sales Line
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Generate.cs CreateCustomerDocument(string[] aItemTypeAction)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0 - Don't Invocie
+1 - Invoice
+
+aItemTypeAction[0] = Invoice Lease Items
+aItemTypeAction[1] = Invoice Returnable consumables
+aItemTypeAction[2] = Invoice consumables
+
+~~~~~~~~~~~~~~~~~~~~~~
+SOLPM TransactionType
+~~~~~~~~~~~~~~~~~~~~~~
+0  - Receive Deposit
+1  - Refund Deposit
+2  - Allocate Deposit To Payment
+3  - Receive Advance Payment
+4  - Refund Advance Payment
+5  - Allocate Advance pmt to Payment
+6  - Advance Payment Adjustment
+7  - Receive Normal Payment
+8  - Receive Normal Payment no Transactions
+9  - Receive/Reverse Deposit no Transactions
+10 - Receive/Reverse Adv Pmt no Transactions
+11 - As Payment Deposit no Transactions
+12 - As Payment Adv Pmt no Transactions
+13 - As Payment Normal Payment no Transactions
+
+~~~~~~~~~~~~~~~~~~~~~~
+Pastel User Defined Fields
+~~~~~~~~~~~~~~~~~~~~~~
+
+Text01 - Location / Status of inventory item
+Text02 - Date of transaction
+Text03 - Document Number
+
+Num01 - Type of inventory item
+0 = Consumable
+1 = Lease Item
+2 = Returnable Consumble
+
+Num02 - Allow Duplicate Entries (Per line in the same order and accross different orders)
+0 = No
+1 = Yes
+
+
+~~~~~~~~~~~~~~~~~~~~~~
+SOLAL Status
+~~~~~~~~~~~~~~~~~~~~~~
+0 - On Asset
+1 - Removed
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DOWNTIME DESCRIPTION COMPOSITION
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+eg of description = *D:205PHIREGRINDER000001120809130809
+0,2 = Identifier eg *D
+3,15 = ItemCode eg 205PHIREGRINDER
+18,6 = Quantity eg 000001
+24,6 = Start date = 120809 (ddMMyy)
+30,6 = End Date = 130809 (ddMMyy)
+36,3 = LinkNum of Parent Row
+ 
+
+~~~~~~~~~~~~~~~~~~~
+SOLHL STATUS
+~~~~~~~~~~~~~~~~~~~
+0 - Normal Item Line
+1 - Returned Item Line
+
+~~~~~~~~~~~~~~~~~~~
+SOLUS User Type
+~~~~~~~~~~~~~~~~~~~
+0 - Front Desk User
+1 - Administrator
+2 - Asset Maintenance
+
+~~~~~~~~~~~~~~~~~~~
+Tabel Changes
+~~~~~~~~~~~~~~~~~~~
+ALTER TABLE "SOLAL"(
+ ADD COLUMN "ItemType" TINYINT,
+ ADD COLUMN "Status" TINYINT DEFAULT '0'
+);
+
+LL 01-09-2009
+
+ALTER TABLE "SOLHH"(
+ ADD COLUMN "Collected" TINYINT DEFAULT '0'
+);
+
+AJD 01-09-2009
+ALTER TABLE "SOLHL"(
+ ADD COLUMN "LinkNum" INTEGER
+);

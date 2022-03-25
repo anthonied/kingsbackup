@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsProjectDeliveryNote" targetNamespace="http://tempuri.org/dsProjectDeliveryNote.xsd" xmlns:mstns="http://tempuri.org/dsProjectDeliveryNote.xsd" xmlns="http://tempuri.org/dsProjectDeliveryNote.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsProjectDeliveryNote" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsProjectDeliveryNote" msprop:Generator_UserDSName="dsProjectDeliveryNote">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtProjectDeliveryNote" msprop:Generator_TableClassName="dtProjectDeliveryNoteDataTable" msprop:Generator_TableVarName="tabledtProjectDeliveryNote" msprop:Generator_TablePropName="dtProjectDeliveryNote" msprop:Generator_RowDeletingName="dtProjectDeliveryNoteRowDeleting" msprop:Generator_UserTableName="dtProjectDeliveryNote" msprop:Generator_RowChangingName="dtProjectDeliveryNoteRowChanging" msprop:Generator_RowEvHandlerName="dtProjectDeliveryNoteRowChangeEventHandler" msprop:Generator_RowDeletedName="dtProjectDeliveryNoteRowDeleted" msprop:Generator_RowEvArgName="dtProjectDeliveryNoteRowChangeEvent" msprop:Generator_RowChangedName="dtProjectDeliveryNoteRowChanged" msprop:Generator_RowClassName="dtProjectDeliveryNoteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCode" msprop:Generator_ColumnVarNameInTable="columnItemCode" msprop:Generator_ColumnPropNameInRow="ItemCode" msprop:Generator_ColumnPropNameInTable="ItemCodeColumn" msprop:Generator_UserColumnName="ItemCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemDescription" msprop:Generator_ColumnVarNameInTable="columnItemDescription" msprop:Generator_ColumnPropNameInRow="ItemDescription" msprop:Generator_ColumnPropNameInTable="ItemDescriptionColumn" msprop:Generator_UserColumnName="ItemDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn" msprop:Generator_UserColumnName="Unit" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

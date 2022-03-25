@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsDuplicates" targetNamespace="http://tempuri.org/dsDuplicates.xsd" xmlns:mstns="http://tempuri.org/dsDuplicates.xsd" xmlns="http://tempuri.org/dsDuplicates.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsDuplicates" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsDuplicates" msprop:Generator_DataSetName="dsDuplicates">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtDuplicates" msprop:Generator_UserTableName="dtDuplicates" msprop:Generator_RowDeletedName="dtDuplicatesRowDeleted" msprop:Generator_TableClassName="dtDuplicatesDataTable" msprop:Generator_RowChangedName="dtDuplicatesRowChanged" msprop:Generator_RowClassName="dtDuplicatesRow" msprop:Generator_RowChangingName="dtDuplicatesRowChanging" msprop:Generator_RowEvArgName="dtDuplicatesRowChangeEvent" msprop:Generator_RowEvHandlerName="dtDuplicatesRowChangeEventHandler" msprop:Generator_TablePropName="dtDuplicates" msprop:Generator_TableVarName="tabledtDuplicates" msprop:Generator_RowDeletingName="dtDuplicatesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LDocumentNumber" msprop:Generator_UserColumnName="LDocumentNumber" msprop:Generator_ColumnPropNameInRow="LDocumentNumber" msprop:Generator_ColumnVarNameInTable="columnLDocumentNumber" msprop:Generator_ColumnPropNameInTable="LDocumentNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LCustomerCode" msprop:Generator_UserColumnName="LCustomerCode" msprop:Generator_ColumnPropNameInRow="LCustomerCode" msprop:Generator_ColumnVarNameInTable="columnLCustomerCode" msprop:Generator_ColumnPropNameInTable="LCustomerCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LItemCode" msprop:Generator_UserColumnName="LItemCode" msprop:Generator_ColumnPropNameInRow="LItemCode" msprop:Generator_ColumnVarNameInTable="columnLItemCode" msprop:Generator_ColumnPropNameInTable="LItemCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LDescription" msprop:Generator_UserColumnName="LDescription" msprop:Generator_ColumnPropNameInRow="LDescription" msprop:Generator_ColumnVarNameInTable="columnLDescription" msprop:Generator_ColumnPropNameInTable="LDescriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ADocumentNumber" msprop:Generator_UserColumnName="ADocumentNumber" msprop:Generator_ColumnPropNameInRow="ADocumentNumber" msprop:Generator_ColumnVarNameInTable="columnADocumentNumber" msprop:Generator_ColumnPropNameInTable="ADocumentNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ACustomerCode" msprop:Generator_UserColumnName="ACustomerCode" msprop:Generator_ColumnPropNameInRow="ACustomerCode" msprop:Generator_ColumnVarNameInTable="columnACustomerCode" msprop:Generator_ColumnPropNameInTable="ACustomerCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AItemCode" msprop:Generator_UserColumnName="AItemCode" msprop:Generator_ColumnPropNameInRow="AItemCode" msprop:Generator_ColumnVarNameInTable="columnAItemCode" msprop:Generator_ColumnPropNameInTable="AItemCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AItemType" msprop:Generator_UserColumnName="AItemType" msprop:Generator_ColumnPropNameInRow="AItemType" msprop:Generator_ColumnVarNameInTable="columnAItemType" msprop:Generator_ColumnPropNameInTable="AItemTypeColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

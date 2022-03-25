@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CompanyList>
+	<Company id="1" name="Kings Hire" datapath="C:\Pastel17\KINGS" applicationpath="C:\Pastel17" pastelconn="Server Name=server;Database Name=PKINGS17;Uid=;Pwd=;" solpmsconn="Server Name=server;Database Name=LKINGS17;Uid=;Pwd=;"></Company>
+  <Company id="3" name="Kings Hire" datapath="C:\Pastel17\KINGS2" applicationpath="C:\Pastel17" pastelconn="Server Name=server;Database Name=PKINGS2;Uid=;Pwd=;" solpmsconn="Server Name=server;Database Name=LKINGS2;Uid=;Pwd=;"></Company>
+	<Company id="2" name="Kings Hire Test" datapath="C:\Pastel17\KINGS17TEST" applicationpath="C:\Pastel17" pastelconn="Server Name=server;Database Name=PKINGS17TEST;Uid=;Pwd=;" solpmsconn="Server Name=server;Database Name=LKINGS17TEST;Uid=;Pwd=;"></Company>
+</CompanyList>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPickingSlip" targetNamespace="http://tempuri.org/dsPickingSlip.xsd" xmlns:mstns="http://tempuri.org/dsPickingSlip.xsd" xmlns="http://tempuri.org/dsPickingSlip.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPickingSlip" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPickingSlip" msprop:Generator_UserDSName="dsPickingSlip">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtPickingSlip" msprop:Generator_TableClassName="dtPickingSlipDataTable" msprop:Generator_TableVarName="tabledtPickingSlip" msprop:Generator_TablePropName="dtPickingSlip" msprop:Generator_RowDeletingName="dtPickingSlipRowDeleting" msprop:Generator_UserTableName="dtPickingSlip" msprop:Generator_RowChangingName="dtPickingSlipRowChanging" msprop:Generator_RowEvHandlerName="dtPickingSlipRowChangeEventHandler" msprop:Generator_RowDeletedName="dtPickingSlipRowDeleted" msprop:Generator_RowEvArgName="dtPickingSlipRowChangeEvent" msprop:Generator_RowChangedName="dtPickingSlipRowChanged" msprop:Generator_RowClassName="dtPickingSlipRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemCode" msprop:Generator_ColumnVarNameInTable="columnItemCode" msprop:Generator_ColumnPropNameInRow="ItemCode" msprop:Generator_ColumnPropNameInTable="ItemCodeColumn" msprop:Generator_UserColumnName="ItemCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemDescription" msprop:Generator_ColumnVarNameInTable="columnItemDescription" msprop:Generator_ColumnPropNameInRow="ItemDescription" msprop:Generator_ColumnPropNameInTable="ItemDescriptionColumn" msprop:Generator_UserColumnName="ItemDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="Unit" msprop:Generator_ColumnVarNameInTable="columnUnit" msprop:Generator_ColumnPropNameInRow="Unit" msprop:Generator_ColumnPropNameInTable="UnitColumn" msprop:Generator_UserColumnName="Unit" type="xs:string" minOccurs="0" />
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemDiscount" msprop:Generator_ColumnVarNameInTable="columnItemDiscount" msprop:Generator_ColumnPropNameInRow="ItemDiscount" msprop:Generator_ColumnPropNameInTable="ItemDiscountColumn" msprop:Generator_UserColumnName="ItemDiscount" type="xs:string" minOccurs="0" />
+              <xs:element name="ExclPrice" msprop:Generator_ColumnVarNameInTable="columnExclPrice" msprop:Generator_ColumnPropNameInRow="ExclPrice" msprop:Generator_ColumnPropNameInTable="ExclPriceColumn" msprop:Generator_UserColumnName="ExclPrice" type="xs:string" minOccurs="0" />
+              <xs:element name="Nett" msprop:Generator_ColumnVarNameInTable="columnNett" msprop:Generator_ColumnPropNameInRow="Nett" msprop:Generator_ColumnPropNameInTable="NettColumn" msprop:Generator_UserColumnName="Nett" type="xs:string" minOccurs="0" />
+              <xs:element name="PickingSlipTotal" msprop:Generator_ColumnVarNameInTable="columnPickingSlipTotal" msprop:Generator_ColumnPropNameInRow="PickingSlipTotal" msprop:Generator_ColumnPropNameInTable="PickingSlipTotalColumn" msprop:Generator_UserColumnName="PickingSlipTotal" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

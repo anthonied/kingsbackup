@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="invokeSDK">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sDataPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="invokeSDKResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="invokeSDKResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sDataPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="testResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="testResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessTransfer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sDocNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDocType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHistHeader" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sHistLines" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDataPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSupplRef" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSOLPMSConn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSenderUserCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSenderUserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessTransferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessTransferResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GenerateGLCodes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sDatapath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSOLPMSConn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPastelConn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GenerateGLCodesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GenerateGLCodesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="invokeSDKSoapIn">
+    <wsdl:part name="parameters" element="tns:invokeSDK" />
+  </wsdl:message>
+  <wsdl:message name="invokeSDKSoapOut">
+    <wsdl:part name="parameters" element="tns:invokeSDKResponse" />
+  </wsdl:message>
+  <wsdl:message name="testSoapIn">
+    <wsdl:part name="parameters" element="tns:test" />
+  </wsdl:message>
+  <wsdl:message name="testSoapOut">
+    <wsdl:part name="parameters" element="tns:testResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessTransferSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessTransfer" />
+  </wsdl:message>
+  <wsdl:message name="ProcessTransferSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateGLCodesSoapIn">
+    <wsdl:part name="parameters" element="tns:GenerateGLCodes" />
+  </wsdl:message>
+  <wsdl:message name="GenerateGLCodesSoapOut">
+    <wsdl:part name="parameters" element="tns:GenerateGLCodesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TransferManagerSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="invokeSDK">
+      <wsdl:input message="tns:invokeSDKSoapIn" />
+      <wsdl:output message="tns:invokeSDKSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <wsdl:input message="tns:testSoapIn" />
+      <wsdl:output message="tns:testSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTransfer">
+      <wsdl:input message="tns:ProcessTransferSoapIn" />
+      <wsdl:output message="tns:ProcessTransferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGLCodes">
+      <wsdl:input message="tns:GenerateGLCodesSoapIn" />
+      <wsdl:output message="tns:GenerateGLCodesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TransferManagerSoap" type="tns:TransferManagerSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="invokeSDK">
+      <soap:operation soapAction="http://tempuri.org/invokeSDK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTransfer">
+      <soap:operation soapAction="http://tempuri.org/ProcessTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGLCodes">
+      <soap:operation soapAction="http://tempuri.org/GenerateGLCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TransferManagerSoap12" type="tns:TransferManagerSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="invokeSDK">
+      <soap12:operation soapAction="http://tempuri.org/invokeSDK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap12:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTransfer">
+      <soap12:operation soapAction="http://tempuri.org/ProcessTransfer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateGLCodes">
+      <soap12:operation soapAction="http://tempuri.org/GenerateGLCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TransferManager">
+    <wsdl:port name="TransferManagerSoap" binding="tns:TransferManagerSoap">
+      <soap:address location="http://admin-pc/Liquid/TransferManager.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TransferManagerSoap12" binding="tns:TransferManagerSoap12">
+      <soap12:address location="http://admin-pc/Liquid/TransferManager.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

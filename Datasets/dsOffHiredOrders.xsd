@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsOffHiredOrders" targetNamespace="http://tempuri.org/dsOffHiredOrders.xsd" xmlns:mstns="http://tempuri.org/dsOffHiredOrders.xsd" xmlns="http://tempuri.org/dsOffHiredOrders.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsOffHiredOrders" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsOffHiredOrders" msprop:Generator_UserDSName="dsOffHiredOrders">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtOffHiredOrders" msprop:Generator_TableClassName="dtOffHiredOrdersDataTable" msprop:Generator_TableVarName="tabledtOffHiredOrders" msprop:Generator_TablePropName="dtOffHiredOrders" msprop:Generator_RowDeletingName="dtOffHiredOrdersRowDeleting" msprop:Generator_RowChangingName="dtOffHiredOrdersRowChanging" msprop:Generator_RowEvHandlerName="dtOffHiredOrdersRowChangeEventHandler" msprop:Generator_RowDeletedName="dtOffHiredOrdersRowDeleted" msprop:Generator_UserTableName="dtOffHiredOrders" msprop:Generator_RowChangedName="dtOffHiredOrdersRowChanged" msprop:Generator_RowEvArgName="dtOffHiredOrdersRowChangeEvent" msprop:Generator_RowClassName="dtOffHiredOrdersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OffHireNumber" msprop:Generator_ColumnVarNameInTable="columnOffHireNumber" msprop:Generator_ColumnPropNameInRow="OffHireNumber" msprop:Generator_ColumnPropNameInTable="OffHireNumberColumn" msprop:Generator_UserColumnName="OffHireNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:string" minOccurs="0" />
+              <xs:element name="Time" msprop:Generator_ColumnVarNameInTable="columnTime" msprop:Generator_ColumnPropNameInRow="Time" msprop:Generator_ColumnPropNameInTable="TimeColumn" msprop:Generator_UserColumnName="Time" type="xs:string" minOccurs="0" />
+              <xs:element name="OffHireDate" msprop:Generator_ColumnVarNameInTable="columnOffHireDate" msprop:Generator_ColumnPropNameInRow="OffHireDate" msprop:Generator_ColumnPropNameInTable="OffHireDateColumn" msprop:Generator_UserColumnName="OffHireDate" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemNumber" msprop:Generator_ColumnVarNameInTable="columnItemNumber" msprop:Generator_ColumnPropNameInRow="ItemNumber" msprop:Generator_ColumnPropNameInTable="ItemNumberColumn" msprop:Generator_UserColumnName="ItemNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientCode" msprop:Generator_ColumnVarNameInTable="columnClientCode" msprop:Generator_ColumnPropNameInRow="ClientCode" msprop:Generator_ColumnPropNameInTable="ClientCodeColumn" msprop:Generator_UserColumnName="ClientCode" type="xs:string" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="DeliveryNoteNumber" msprop:Generator_ColumnVarNameInTable="columnDeliveryNoteNumber" msprop:Generator_ColumnPropNameInRow="DeliveryNoteNumber" msprop:Generator_ColumnPropNameInTable="DeliveryNoteNumberColumn" msprop:Generator_UserColumnName="DeliveryNoteNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Comments" msprop:Generator_ColumnVarNameInTable="columnComments" msprop:Generator_ColumnPropNameInRow="Comments" msprop:Generator_ColumnPropNameInTable="CommentsColumn" msprop:Generator_UserColumnName="Comments" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

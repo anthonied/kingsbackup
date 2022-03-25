@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsAvgTurnoverPerCust" targetNamespace="http://tempuri.org/dsAvgTurnoverPerCust.xsd" xmlns:mstns="http://tempuri.org/dsAvgTurnoverPerCust.xsd" xmlns="http://tempuri.org/dsAvgTurnoverPerCust.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsAvgTurnoverPerCust" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsAvgTurnoverPerCust" msprop:Generator_DataSetName="dsAvgTurnoverPerCust">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCustomerTurnover" msprop:Generator_UserTableName="dtCustomerTurnover" msprop:Generator_RowDeletedName="dtCustomerTurnoverRowDeleted" msprop:Generator_RowChangedName="dtCustomerTurnoverRowChanged" msprop:Generator_RowClassName="dtCustomerTurnoverRow" msprop:Generator_RowChangingName="dtCustomerTurnoverRowChanging" msprop:Generator_RowEvArgName="dtCustomerTurnoverRowChangeEvent" msprop:Generator_RowEvHandlerName="dtCustomerTurnoverRowChangeEventHandler" msprop:Generator_TableClassName="dtCustomerTurnoverDataTable" msprop:Generator_TableVarName="tabledtCustomerTurnover" msprop:Generator_RowDeletingName="dtCustomerTurnoverRowDeleting" msprop:Generator_TablePropName="dtCustomerTurnover">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CustCode" msprop:Generator_UserColumnName="CustCode" msprop:Generator_ColumnPropNameInRow="CustCode" msprop:Generator_ColumnVarNameInTable="columnCustCode" msprop:Generator_ColumnPropNameInTable="CustCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CustName" msprop:Generator_UserColumnName="CustName" msprop:Generator_ColumnPropNameInRow="CustName" msprop:Generator_ColumnVarNameInTable="columnCustName" msprop:Generator_ColumnPropNameInTable="CustNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SalesRep" msprop:Generator_UserColumnName="SalesRep" msprop:Generator_ColumnPropNameInRow="SalesRep" msprop:Generator_ColumnVarNameInTable="columnSalesRep" msprop:Generator_ColumnPropNameInTable="SalesRepColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="_x0033_0Days" msprop:Generator_UserColumnName="30Days" msprop:Generator_ColumnPropNameInRow="_30Days" msprop:Generator_ColumnVarNameInTable="column30Days" msprop:Generator_ColumnPropNameInTable="_30DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0036_0Days" msprop:Generator_UserColumnName="60Days" msprop:Generator_ColumnPropNameInRow="_60Days" msprop:Generator_ColumnVarNameInTable="column60Days" msprop:Generator_ColumnPropNameInTable="_60DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0039_0Days" msprop:Generator_UserColumnName="90Days" msprop:Generator_ColumnPropNameInRow="_90Days" msprop:Generator_ColumnVarNameInTable="column90Days" msprop:Generator_ColumnPropNameInTable="_90DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0031_20Days" msprop:Generator_UserColumnName="120Days" msprop:Generator_ColumnPropNameInRow="_120Days" msprop:Generator_ColumnVarNameInTable="column120Days" msprop:Generator_ColumnPropNameInTable="_120DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0031_50Days" msprop:Generator_UserColumnName="150Days" msprop:Generator_ColumnPropNameInRow="_150Days" msprop:Generator_ColumnVarNameInTable="column150Days" msprop:Generator_ColumnPropNameInTable="_150DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0031_80Days" msprop:Generator_UserColumnName="180Days" msprop:Generator_ColumnPropNameInRow="_180Days" msprop:Generator_ColumnVarNameInTable="column180Days" msprop:Generator_ColumnPropNameInTable="_180DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0032_10Days" msprop:Generator_UserColumnName="210Days" msprop:Generator_ColumnPropNameInRow="_210Days" msprop:Generator_ColumnVarNameInTable="column210Days" msprop:Generator_ColumnPropNameInTable="_210DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0032_40Days" msprop:Generator_UserColumnName="240Days" msprop:Generator_ColumnPropNameInRow="_240Days" msprop:Generator_ColumnVarNameInTable="column240Days" msprop:Generator_ColumnPropNameInTable="_240DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0032_70Days" msprop:Generator_UserColumnName="270Days" msprop:Generator_ColumnPropNameInRow="_270Days" msprop:Generator_ColumnVarNameInTable="column270Days" msprop:Generator_ColumnPropNameInTable="_270DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0033_00Days" msprop:Generator_UserColumnName="300Days" msprop:Generator_ColumnPropNameInRow="_300Days" msprop:Generator_ColumnVarNameInTable="column300Days" msprop:Generator_ColumnPropNameInTable="_300DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0033_30Days" msprop:Generator_UserColumnName="330Days" msprop:Generator_ColumnPropNameInRow="_330Days" msprop:Generator_ColumnVarNameInTable="column330Days" msprop:Generator_ColumnPropNameInTable="_330DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0033_60Days" msprop:Generator_UserColumnName="360Days" msprop:Generator_ColumnPropNameInRow="_360Days" msprop:Generator_ColumnVarNameInTable="column360Days" msprop:Generator_ColumnPropNameInTable="_360DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_UserColumnName="Total" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInTable="TotalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Avg" msprop:Generator_UserColumnName="Avg" msprop:Generator_ColumnPropNameInRow="Avg" msprop:Generator_ColumnVarNameInTable="columnAvg" msprop:Generator_ColumnPropNameInTable="AvgColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0033_90Days" msprop:Generator_UserColumnName="390Days" msprop:Generator_ColumnPropNameInRow="_390Days" msprop:Generator_ColumnVarNameInTable="column390Days" msprop:Generator_ColumnPropNameInTable="_390DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0034_20Days" msprop:Generator_UserColumnName="420Days" msprop:Generator_ColumnPropNameInRow="_420Days" msprop:Generator_ColumnVarNameInTable="column420Days" msprop:Generator_ColumnPropNameInTable="_420DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0034_50Days" msprop:Generator_UserColumnName="450Days" msprop:Generator_ColumnPropNameInRow="_450Days" msprop:Generator_ColumnVarNameInTable="column450Days" msprop:Generator_ColumnPropNameInTable="_450DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0034_80Days" msprop:Generator_UserColumnName="480Days" msprop:Generator_ColumnPropNameInRow="_480Days" msprop:Generator_ColumnVarNameInTable="column480Days" msprop:Generator_ColumnPropNameInTable="_480DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0035_10Days" msprop:Generator_UserColumnName="510Days" msprop:Generator_ColumnPropNameInRow="_510Days" msprop:Generator_ColumnVarNameInTable="column510Days" msprop:Generator_ColumnPropNameInTable="_510DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="_x0035_40Days" msprop:Generator_UserColumnName="540Days" msprop:Generator_ColumnPropNameInRow="_540Days" msprop:Generator_ColumnVarNameInTable="column540Days" msprop:Generator_ColumnPropNameInTable="_540DaysColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ShortName" msprop:Generator_UserColumnName="ShortName" msprop:Generator_ColumnPropNameInRow="ShortName" msprop:Generator_ColumnVarNameInTable="columnShortName" msprop:Generator_ColumnPropNameInTable="ShortNameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

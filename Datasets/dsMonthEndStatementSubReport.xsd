@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsMonthEndStatementSubReport" targetNamespace="http://tempuri.org/dsMonthEndStatementSubReport.xsd" xmlns:mstns="http://tempuri.org/dsMonthEndStatementSubReport.xsd" xmlns="http://tempuri.org/dsMonthEndStatementSubReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsMonthEndStatementSubReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsMonthEndStatementSubReport" msprop:Generator_UserDSName="dsMonthEndStatementSubReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtMonthEndStatementSubReport" msprop:Generator_TableClassName="dtMonthEndStatementSubReportDataTable" msprop:Generator_TableVarName="tabledtMonthEndStatementSubReport" msprop:Generator_TablePropName="dtMonthEndStatementSubReport" msprop:Generator_RowDeletingName="dtMonthEndStatementSubReportRowDeleting" msprop:Generator_UserTableName="dtMonthEndStatementSubReport" msprop:Generator_RowChangingName="dtMonthEndStatementSubReportRowChanging" msprop:Generator_RowEvHandlerName="dtMonthEndStatementSubReportRowChangeEventHandler" msprop:Generator_RowDeletedName="dtMonthEndStatementSubReportRowDeleted" msprop:Generator_RowEvArgName="dtMonthEndStatementSubReportRowChangeEvent" msprop:Generator_RowChangedName="dtMonthEndStatementSubReportRowChanged" msprop:Generator_RowClassName="dtMonthEndStatementSubReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Reference" msprop:Generator_ColumnVarNameInTable="columnReference" msprop:Generator_ColumnPropNameInRow="Reference" msprop:Generator_ColumnPropNameInTable="ReferenceColumn" msprop:Generator_UserColumnName="Reference" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ClientCode" msprop:Generator_ColumnVarNameInTable="columnClientCode" msprop:Generator_ColumnPropNameInRow="ClientCode" msprop:Generator_ColumnPropNameInTable="ClientCodeColumn" msprop:Generator_UserColumnName="ClientCode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
