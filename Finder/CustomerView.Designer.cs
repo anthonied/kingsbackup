@@ -42,7 +42,6 @@ namespace Liquid.Finder
             this.label8 = new System.Windows.Forms.Label();
             this.selCustomerCategory = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.picAutoFormatCode = new System.Windows.Forms.PictureBox();
             this.chkCash = new System.Windows.Forms.CheckBox();
             this.lblCash = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
@@ -108,12 +107,6 @@ namespace Liquid.Finder
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.selStatePrinting = new System.Windows.Forms.ComboBox();
-            this.cmdNote = new System.Windows.Forms.Button();
-            this.cmdSalesPerson = new System.Windows.Forms.Button();
-            this.cmdSearch = new System.Windows.Forms.Button();
-            this.cmdCancel = new System.Windows.Forms.Button();
-            this.cmdSave = new System.Windows.Forms.Button();
-            this.cmdEarlyPaymentFind = new System.Windows.Forms.Button();
             this.txtSameAsPostal = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -123,13 +116,23 @@ namespace Liquid.Finder
             this.rdInclusive = new System.Windows.Forms.RadioButton();
             this.rdExclusive = new System.Windows.Forms.RadioButton();
             this.pnlNotes = new System.Windows.Forms.Panel();
+            this.gbFraud = new System.Windows.Forms.GroupBox();
+            this.txtFraudCode = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.lblNotes = new System.Windows.Forms.Label();
-            this.previousButton = new System.Windows.Forms.Button();
+            this.cmdNew = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
+            this.previousButton = new System.Windows.Forms.Button();
+            this.cmdNote = new System.Windows.Forms.Button();
+            this.cmdSalesPerson = new System.Windows.Forms.Button();
+            this.cmdSearch = new System.Windows.Forms.Button();
+            this.cmdCancel = new System.Windows.Forms.Button();
+            this.cmdSave = new System.Windows.Forms.Button();
+            this.cmdEarlyPaymentFind = new System.Windows.Forms.Button();
+            this.picAutoFormatCode = new System.Windows.Forms.PictureBox();
             this.pnlHeader.SuspendLayout();
             this.gbAuthorisedPerson.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAutoFormatCode)).BeginInit();
             this.pnlPostal.SuspendLayout();
             this.pnlDeliveryAd.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -137,6 +140,8 @@ namespace Liquid.Finder
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.pnlNotes.SuspendLayout();
+            this.gbFraud.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAutoFormatCode)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -268,17 +273,6 @@ namespace Liquid.Finder
             this.label2.TabIndex = 104;
             this.label2.Text = "Customer Category";
             // 
-            // picAutoFormatCode
-            // 
-            this.picAutoFormatCode.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picAutoFormatCode.Image = global::Liquid.Properties.Resources.star_yellow;
-            this.picAutoFormatCode.Location = new System.Drawing.Point(248, 8);
-            this.picAutoFormatCode.Name = "picAutoFormatCode";
-            this.picAutoFormatCode.Size = new System.Drawing.Size(16, 18);
-            this.picAutoFormatCode.TabIndex = 103;
-            this.picAutoFormatCode.TabStop = false;
-            this.picAutoFormatCode.Click += new System.EventHandler(this.picAutoFormatCode_Click);
-            // 
             // chkCash
             // 
             this.chkCash.AutoSize = true;
@@ -362,7 +356,7 @@ namespace Liquid.Finder
             // txtCreation
             // 
             this.txtCreation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCreation.Location = new System.Drawing.Point(324, 197);
+            this.txtCreation.Location = new System.Drawing.Point(324, 245);
             this.txtCreation.MaxLength = 500;
             this.txtCreation.Name = "txtCreation";
             this.txtCreation.ReadOnly = true;
@@ -374,7 +368,7 @@ namespace Liquid.Finder
             // lblCreation
             // 
             this.lblCreation.AutoSize = true;
-            this.lblCreation.Location = new System.Drawing.Point(232, 200);
+            this.lblCreation.Location = new System.Drawing.Point(232, 248);
             this.lblCreation.Name = "lblCreation";
             this.lblCreation.Size = new System.Drawing.Size(72, 13);
             this.lblCreation.TabIndex = 108;
@@ -383,7 +377,7 @@ namespace Liquid.Finder
             // txtContact
             // 
             this.txtContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtContact.Location = new System.Drawing.Point(324, 227);
+            this.txtContact.Location = new System.Drawing.Point(324, 275);
             this.txtContact.MaxLength = 16;
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(154, 20);
@@ -394,7 +388,7 @@ namespace Liquid.Finder
             // lblContact
             // 
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(232, 231);
+            this.lblContact.Location = new System.Drawing.Point(232, 279);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(82, 13);
             this.lblContact.TabIndex = 109;
@@ -403,7 +397,7 @@ namespace Liquid.Finder
             // txtTelephone
             // 
             this.txtTelephone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelephone.Location = new System.Drawing.Point(324, 260);
+            this.txtTelephone.Location = new System.Drawing.Point(324, 308);
             this.txtTelephone.MaxLength = 16;
             this.txtTelephone.Name = "txtTelephone";
             this.txtTelephone.Size = new System.Drawing.Size(154, 20);
@@ -414,7 +408,7 @@ namespace Liquid.Finder
             // lblTelephone
             // 
             this.lblTelephone.AutoSize = true;
-            this.lblTelephone.Location = new System.Drawing.Point(232, 263);
+            this.lblTelephone.Location = new System.Drawing.Point(232, 311);
             this.lblTelephone.Name = "lblTelephone";
             this.lblTelephone.Size = new System.Drawing.Size(58, 13);
             this.lblTelephone.TabIndex = 110;
@@ -423,7 +417,7 @@ namespace Liquid.Finder
             // txtFax
             // 
             this.txtFax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFax.Location = new System.Drawing.Point(324, 293);
+            this.txtFax.Location = new System.Drawing.Point(324, 341);
             this.txtFax.MaxLength = 16;
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(154, 20);
@@ -434,7 +428,7 @@ namespace Liquid.Finder
             // lblFax
             // 
             this.lblFax.AutoSize = true;
-            this.lblFax.Location = new System.Drawing.Point(232, 296);
+            this.lblFax.Location = new System.Drawing.Point(232, 344);
             this.lblFax.Name = "lblFax";
             this.lblFax.Size = new System.Drawing.Size(24, 13);
             this.lblFax.TabIndex = 11;
@@ -443,7 +437,7 @@ namespace Liquid.Finder
             // txtMobile
             // 
             this.txtMobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMobile.Location = new System.Drawing.Point(324, 326);
+            this.txtMobile.Location = new System.Drawing.Point(324, 374);
             this.txtMobile.MaxLength = 16;
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(154, 20);
@@ -454,7 +448,7 @@ namespace Liquid.Finder
             // lblMobile
             // 
             this.lblMobile.AutoSize = true;
-            this.lblMobile.Location = new System.Drawing.Point(232, 329);
+            this.lblMobile.Location = new System.Drawing.Point(232, 377);
             this.lblMobile.Name = "lblMobile";
             this.lblMobile.Size = new System.Drawing.Size(72, 13);
             this.lblMobile.TabIndex = 112;
@@ -463,7 +457,7 @@ namespace Liquid.Finder
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Location = new System.Drawing.Point(324, 357);
+            this.txtEmail.Location = new System.Drawing.Point(324, 405);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(154, 20);
@@ -474,7 +468,7 @@ namespace Liquid.Finder
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(232, 360);
+            this.lblEmail.Location = new System.Drawing.Point(232, 408);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(73, 13);
             this.lblEmail.TabIndex = 113;
@@ -483,7 +477,7 @@ namespace Liquid.Finder
             // txtID
             // 
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtID.Location = new System.Drawing.Point(324, 386);
+            this.txtID.Location = new System.Drawing.Point(324, 195);
             this.txtID.MaxLength = 13;
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(154, 20);
@@ -494,7 +488,7 @@ namespace Liquid.Finder
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(232, 388);
+            this.lblId.Location = new System.Drawing.Point(232, 197);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(65, 13);
             this.lblId.TabIndex = 114;
@@ -967,83 +961,6 @@ namespace Liquid.Finder
             this.selStatePrinting.TabIndex = 0;
             this.selStatePrinting.Text = "Print Statement";
             // 
-            // cmdNote
-            // 
-            this.cmdNote.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdNote.FlatAppearance.BorderSize = 0;
-            this.cmdNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdNote.Image = global::Liquid.Properties.Resources.notebook;
-            this.cmdNote.Location = new System.Drawing.Point(124, 6);
-            this.cmdNote.Name = "cmdNote";
-            this.cmdNote.Size = new System.Drawing.Size(24, 24);
-            this.cmdNote.TabIndex = 162;
-            this.cmdNote.UseVisualStyleBackColor = true;
-            this.cmdNote.Visible = false;
-            this.cmdNote.Click += new System.EventHandler(this.cmdNote_Click);
-            // 
-            // cmdSalesPerson
-            // 
-            this.cmdSalesPerson.BackColor = System.Drawing.Color.White;
-            this.cmdSalesPerson.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdSalesPerson.Image = ((System.Drawing.Image)(resources.GetObject("cmdSalesPerson.Image")));
-            this.cmdSalesPerson.Location = new System.Drawing.Point(454, 466);
-            this.cmdSalesPerson.Name = "cmdSalesPerson";
-            this.cmdSalesPerson.Size = new System.Drawing.Size(25, 23);
-            this.cmdSalesPerson.TabIndex = 108;
-            this.cmdSalesPerson.UseVisualStyleBackColor = false;
-            this.cmdSalesPerson.Click += new System.EventHandler(this.cmdSalesPerson_Click);
-            // 
-            // cmdSearch
-            // 
-            this.cmdSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdSearch.FlatAppearance.BorderSize = 0;
-            this.cmdSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdSearch.Image = ((System.Drawing.Image)(resources.GetObject("cmdSearch.Image")));
-            this.cmdSearch.Location = new System.Drawing.Point(90, 6);
-            this.cmdSearch.Name = "cmdSearch";
-            this.cmdSearch.Size = new System.Drawing.Size(24, 24);
-            this.cmdSearch.TabIndex = 152;
-            this.cmdSearch.UseVisualStyleBackColor = true;
-            this.cmdSearch.Click += new System.EventHandler(this.cmdSearch_Click);
-            // 
-            // cmdCancel
-            // 
-            this.cmdCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdCancel.FlatAppearance.BorderSize = 0;
-            this.cmdCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdCancel.Image = ((System.Drawing.Image)(resources.GetObject("cmdCancel.Image")));
-            this.cmdCancel.Location = new System.Drawing.Point(44, 6);
-            this.cmdCancel.Name = "cmdCancel";
-            this.cmdCancel.Size = new System.Drawing.Size(24, 24);
-            this.cmdCancel.TabIndex = 151;
-            this.cmdCancel.UseVisualStyleBackColor = true;
-            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
-            // 
-            // cmdSave
-            // 
-            this.cmdSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdSave.FlatAppearance.BorderSize = 0;
-            this.cmdSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdSave.Image = ((System.Drawing.Image)(resources.GetObject("cmdSave.Image")));
-            this.cmdSave.Location = new System.Drawing.Point(12, 6);
-            this.cmdSave.Name = "cmdSave";
-            this.cmdSave.Size = new System.Drawing.Size(24, 24);
-            this.cmdSave.TabIndex = 141;
-            this.cmdSave.UseVisualStyleBackColor = true;
-            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
-            // 
-            // cmdEarlyPaymentFind
-            // 
-            this.cmdEarlyPaymentFind.BackColor = System.Drawing.Color.White;
-            this.cmdEarlyPaymentFind.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdEarlyPaymentFind.Image = ((System.Drawing.Image)(resources.GetObject("cmdEarlyPaymentFind.Image")));
-            this.cmdEarlyPaymentFind.Location = new System.Drawing.Point(182, 528);
-            this.cmdEarlyPaymentFind.Name = "cmdEarlyPaymentFind";
-            this.cmdEarlyPaymentFind.Size = new System.Drawing.Size(25, 23);
-            this.cmdEarlyPaymentFind.TabIndex = 107;
-            this.cmdEarlyPaymentFind.UseVisualStyleBackColor = false;
-            this.cmdEarlyPaymentFind.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Customer_KeyDown);
-            // 
             // txtSameAsPostal
             // 
             this.txtSameAsPostal.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1160,6 +1077,7 @@ namespace Liquid.Finder
             // pnlNotes
             // 
             this.pnlNotes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlNotes.Controls.Add(this.gbFraud);
             this.pnlNotes.Controls.Add(this.txtNote);
             this.pnlNotes.Controls.Add(this.lblNotes);
             this.pnlNotes.Location = new System.Drawing.Point(744, 36);
@@ -1167,12 +1085,42 @@ namespace Liquid.Finder
             this.pnlNotes.Size = new System.Drawing.Size(283, 515);
             this.pnlNotes.TabIndex = 172;
             // 
+            // gbFraud
+            // 
+            this.gbFraud.BackColor = System.Drawing.SystemColors.Control;
+            this.gbFraud.Controls.Add(this.txtFraudCode);
+            this.gbFraud.Controls.Add(this.label9);
+            this.gbFraud.Location = new System.Drawing.Point(6, 453);
+            this.gbFraud.Name = "gbFraud";
+            this.gbFraud.Size = new System.Drawing.Size(272, 55);
+            this.gbFraud.TabIndex = 117;
+            this.gbFraud.TabStop = false;
+            this.gbFraud.Text = "Fraud";
+            // 
+            // txtFraudCode
+            // 
+            this.txtFraudCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFraudCode.Location = new System.Drawing.Point(121, 26);
+            this.txtFraudCode.MaxLength = 16;
+            this.txtFraudCode.Name = "txtFraudCode";
+            this.txtFraudCode.Size = new System.Drawing.Size(134, 20);
+            this.txtFraudCode.TabIndex = 117;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(14, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Kings Fraud Code";
+            // 
             // txtNote
             // 
             this.txtNote.Location = new System.Drawing.Point(6, 29);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(274, 480);
+            this.txtNote.Size = new System.Drawing.Size(274, 417);
             this.txtNote.TabIndex = 3;
             // 
             // lblNotes
@@ -1185,19 +1133,18 @@ namespace Liquid.Finder
             this.lblNotes.TabIndex = 2;
             this.lblNotes.Text = "Notes:";
             // 
-            // previousButton
+            // cmdNew
             // 
-            this.previousButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.previousButton.FlatAppearance.BorderSize = 0;
-            this.previousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.previousButton.Image = global::Liquid.Properties.Resources.nav_left_blue;
-            this.previousButton.Location = new System.Drawing.Point(159, 6);
-            this.previousButton.Name = "previousButton";
-            this.previousButton.Size = new System.Drawing.Size(24, 24);
-            this.previousButton.TabIndex = 173;
-            this.previousButton.UseVisualStyleBackColor = true;
-            this.previousButton.Visible = false;
-            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
+            this.cmdNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdNew.FlatAppearance.BorderSize = 0;
+            this.cmdNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdNew.Image = global::Liquid.Properties.Resources.media_play_green;
+            this.cmdNew.Location = new System.Drawing.Point(999, 6);
+            this.cmdNew.Name = "cmdNew";
+            this.cmdNew.Size = new System.Drawing.Size(24, 24);
+            this.cmdNew.TabIndex = 175;
+            this.cmdNew.UseVisualStyleBackColor = true;
+            this.cmdNew.Click += new System.EventHandler(this.cmdNew_Click);
             // 
             // nextButton
             // 
@@ -1213,11 +1160,114 @@ namespace Liquid.Finder
             this.nextButton.Visible = false;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
+            // previousButton
+            // 
+            this.previousButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.previousButton.FlatAppearance.BorderSize = 0;
+            this.previousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.previousButton.Image = global::Liquid.Properties.Resources.nav_left_blue;
+            this.previousButton.Location = new System.Drawing.Point(159, 6);
+            this.previousButton.Name = "previousButton";
+            this.previousButton.Size = new System.Drawing.Size(24, 24);
+            this.previousButton.TabIndex = 173;
+            this.previousButton.UseVisualStyleBackColor = true;
+            this.previousButton.Visible = false;
+            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
+            // 
+            // cmdNote
+            // 
+            this.cmdNote.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdNote.FlatAppearance.BorderSize = 0;
+            this.cmdNote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdNote.Image = global::Liquid.Properties.Resources.notebook;
+            this.cmdNote.Location = new System.Drawing.Point(124, 6);
+            this.cmdNote.Name = "cmdNote";
+            this.cmdNote.Size = new System.Drawing.Size(24, 24);
+            this.cmdNote.TabIndex = 162;
+            this.cmdNote.UseVisualStyleBackColor = true;
+            this.cmdNote.Visible = false;
+            this.cmdNote.Click += new System.EventHandler(this.cmdNote_Click);
+            // 
+            // cmdSalesPerson
+            // 
+            this.cmdSalesPerson.BackColor = System.Drawing.Color.White;
+            this.cmdSalesPerson.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdSalesPerson.Image = ((System.Drawing.Image)(resources.GetObject("cmdSalesPerson.Image")));
+            this.cmdSalesPerson.Location = new System.Drawing.Point(454, 466);
+            this.cmdSalesPerson.Name = "cmdSalesPerson";
+            this.cmdSalesPerson.Size = new System.Drawing.Size(25, 23);
+            this.cmdSalesPerson.TabIndex = 108;
+            this.cmdSalesPerson.UseVisualStyleBackColor = false;
+            this.cmdSalesPerson.Click += new System.EventHandler(this.cmdSalesPerson_Click);
+            // 
+            // cmdSearch
+            // 
+            this.cmdSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdSearch.FlatAppearance.BorderSize = 0;
+            this.cmdSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdSearch.Image = ((System.Drawing.Image)(resources.GetObject("cmdSearch.Image")));
+            this.cmdSearch.Location = new System.Drawing.Point(90, 6);
+            this.cmdSearch.Name = "cmdSearch";
+            this.cmdSearch.Size = new System.Drawing.Size(24, 24);
+            this.cmdSearch.TabIndex = 152;
+            this.cmdSearch.UseVisualStyleBackColor = true;
+            this.cmdSearch.Click += new System.EventHandler(this.cmdSearch_Click);
+            // 
+            // cmdCancel
+            // 
+            this.cmdCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdCancel.FlatAppearance.BorderSize = 0;
+            this.cmdCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdCancel.Image = ((System.Drawing.Image)(resources.GetObject("cmdCancel.Image")));
+            this.cmdCancel.Location = new System.Drawing.Point(44, 6);
+            this.cmdCancel.Name = "cmdCancel";
+            this.cmdCancel.Size = new System.Drawing.Size(24, 24);
+            this.cmdCancel.TabIndex = 151;
+            this.cmdCancel.UseVisualStyleBackColor = true;
+            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
+            // 
+            // cmdSave
+            // 
+            this.cmdSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdSave.FlatAppearance.BorderSize = 0;
+            this.cmdSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdSave.Image = ((System.Drawing.Image)(resources.GetObject("cmdSave.Image")));
+            this.cmdSave.Location = new System.Drawing.Point(12, 6);
+            this.cmdSave.Name = "cmdSave";
+            this.cmdSave.Size = new System.Drawing.Size(24, 24);
+            this.cmdSave.TabIndex = 141;
+            this.cmdSave.UseVisualStyleBackColor = true;
+            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
+            // 
+            // cmdEarlyPaymentFind
+            // 
+            this.cmdEarlyPaymentFind.BackColor = System.Drawing.Color.White;
+            this.cmdEarlyPaymentFind.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdEarlyPaymentFind.Image = ((System.Drawing.Image)(resources.GetObject("cmdEarlyPaymentFind.Image")));
+            this.cmdEarlyPaymentFind.Location = new System.Drawing.Point(182, 528);
+            this.cmdEarlyPaymentFind.Name = "cmdEarlyPaymentFind";
+            this.cmdEarlyPaymentFind.Size = new System.Drawing.Size(25, 23);
+            this.cmdEarlyPaymentFind.TabIndex = 107;
+            this.cmdEarlyPaymentFind.UseVisualStyleBackColor = false;
+            this.cmdEarlyPaymentFind.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Customer_KeyDown);
+            // 
+            // picAutoFormatCode
+            // 
+            this.picAutoFormatCode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picAutoFormatCode.Image = global::Liquid.Properties.Resources.star_yellow;
+            this.picAutoFormatCode.Location = new System.Drawing.Point(248, 8);
+            this.picAutoFormatCode.Name = "picAutoFormatCode";
+            this.picAutoFormatCode.Size = new System.Drawing.Size(16, 18);
+            this.picAutoFormatCode.TabIndex = 103;
+            this.picAutoFormatCode.TabStop = false;
+            this.picAutoFormatCode.Click += new System.EventHandler(this.picAutoFormatCode_Click);
+            // 
             // CustomerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1039, 585);
+            this.Controls.Add(this.cmdNew);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.previousButton);
             this.Controls.Add(this.pnlNotes);
@@ -1284,7 +1334,6 @@ namespace Liquid.Finder
             this.pnlHeader.PerformLayout();
             this.gbAuthorisedPerson.ResumeLayout(false);
             this.gbAuthorisedPerson.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAutoFormatCode)).EndInit();
             this.pnlPostal.ResumeLayout(false);
             this.pnlPostal.PerformLayout();
             this.pnlDeliveryAd.ResumeLayout(false);
@@ -1299,6 +1348,9 @@ namespace Liquid.Finder
             this.groupBox4.PerformLayout();
             this.pnlNotes.ResumeLayout(false);
             this.pnlNotes.PerformLayout();
+            this.gbFraud.ResumeLayout(false);
+            this.gbFraud.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAutoFormatCode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1403,5 +1455,9 @@ namespace Liquid.Finder
         public System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Button previousButton;
         private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.GroupBox gbFraud;
+        private System.Windows.Forms.TextBox txtFraudCode;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button cmdNew;
     }
 }

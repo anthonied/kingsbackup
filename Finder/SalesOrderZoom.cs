@@ -33,7 +33,8 @@ namespace Liquid.Finder
 			InitializeComponent();
 		}
 
-		public string sResult = "";
+		public string SelectedSalesOrderNumber = "";
+		
 		public Solsage_Pastel_API.solPastelSDK clsSDK = new Solsage_Pastel_API.solPastelSDK();
 
 		private void SalesOrderZoom_Load(object sender, EventArgs e)
@@ -47,9 +48,7 @@ namespace Liquid.Finder
 		}
 
 		private void loadSalesGrid()
-		{
-			//dgSalesOrder.Rows.Clear();
-			
+		{						
 			PsqlConnection oConn = new PsqlConnection(Liquid.Classes.Connect.PastelConnectionString);
 			oConn.Open();
 			string sSql = "SELECT Top 2000 DocumentNumber, HistoryHeader.CustomerCode CustCode, CustomerDesc, DocumentDate FROM HistoryHeader ";
@@ -68,18 +67,7 @@ namespace Liquid.Finder
 			bsSalesOrder.DataMember = dsSalesOrder.Tables["Salesorder"].TableName;
 
 			dgSalesOrder.DataSource = bsSalesOrder;
-
-			/*PsqlDataReader rdReader = Liquid.Classes.Connect.getDataCommand(sSql, oConn).ExecuteReader();
-			while (rdReader.Read())
-			{
-				int n = dgSalesOrder.Rows.Add();
-				dgSalesOrder.Rows[n].Cells[0].Value = rdReader["DocumentNumber"].ToString();
-				dgSalesOrder.Rows[n].Cells[1].Value = rdReader["CustCode"].ToString();
-				dgSalesOrder.Rows[n].Cells[2].Value = Convert.ToDateTimeFromddMMyyyySlash(rdReader["DocumentDate"]).ToString("dd/MM/yyyy");
-				dgSalesOrder.Rows[n].Cells[3].Value = rdReader["CustomerDesc"].ToString();
-			}
-			rdReader.Close();*/
-
+			
 			oConn.Dispose();
 
 			dgSalesOrder.Focus();
@@ -87,7 +75,9 @@ namespace Liquid.Finder
 				
 		private void dgSalesOrder_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
 		{
-			sResult = dgSalesOrder.SelectedRows[0].Cells[0].Value.ToString();
+			var selectedIndex = dgSalesOrder.SelectedRows[0].Index;
+
+			SelectedSalesOrderNumber = dgSalesOrder.SelectedRows[0].Cells[0].Value.ToString();
 			this.DialogResult = DialogResult.OK;
 			this.Close();
 		}
@@ -119,7 +109,7 @@ namespace Liquid.Finder
 				//LL Phalaborwa if
 				if (dgSalesOrder.Rows.Count > 0)
 				{
-					sResult = dgSalesOrder.SelectedRows[0].Cells[0].Value.ToString();
+					SelectedSalesOrderNumber = dgSalesOrder.SelectedRows[0].Cells[0].Value.ToString();
 					this.DialogResult = DialogResult.OK;
 					this.Close();
 				}				

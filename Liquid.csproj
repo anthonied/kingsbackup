@@ -506,6 +506,12 @@
     <Compile Include="Finder\JobCodeZoom.Designer.cs">
       <DependentUpon>JobCodeZoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Customers\WalkInCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customers\WalkInCustomer.Designer.cs">
+      <DependentUpon>WalkInCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DeliveryMessageSetup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1144,6 +1150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Finder\JobCodeZoom.resx">
       <DependentUpon>JobCodeZoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customers\WalkInCustomer.resx">
+      <DependentUpon>WalkInCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DeliveryMessageSetup.resx">
       <DependentUpon>DeliveryMessageSetup.cs</DependentUpon>

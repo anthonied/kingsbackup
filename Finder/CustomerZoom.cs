@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Pervasive.Data.SqlClient;
 
@@ -50,7 +51,7 @@ namespace Liquid.Finder
 			txtDescription.CharacterCasing = CharacterCasing.Upper;
 			loadCustomerGrid();
 		}
-		
+
 		private void loadCustomerGrid()
 		{
 			var pastelConnection = new PsqlConnection(Classes.Connect.PastelConnectionString);
@@ -62,19 +63,37 @@ namespace Liquid.Finder
 			            WHERE (CustomerMaster.CustomerCode LIKE '%{0}%' or '{0}' = '') 
 			            AND (upper(CustomerMaster.CustomerDesc) LIKE '%{1}%' or '{1}' = '')            
 			            ORDER BY CustomerMaster.CustomerCode ", txtAccountCode.Text.Replace("\r", ""), txtDescription.Text);
-            
-                
-			
+
+
+
 			var customerDataSet = Classes.Connect.getDataSet(sql, "Customers", pastelConnection);
 
 			bsSalesOrder = new BindingSource();
 			bsSalesOrder.DataSource = customerDataSet;
-			bsSalesOrder.DataMember = customerDataSet.Tables["Customers"].TableName;            
+			bsSalesOrder.DataMember = customerDataSet.Tables["Customers"].TableName;
 
 			dgCustomers.DataSource = bsSalesOrder;
 
 			pastelConnection.Dispose();
 			dgCustomers.Focus();
+
+			using (var oConn = new PsqlConnection(Classes.Connect.LiquidConnectionString))
+			{
+				oConn.Open();
+				var sSql = "Select CustomerCode From CustomerDetail where ltrim(rtrim(FraudId)) <> ''";
+				var rdReader = Classes.Connect.getDataCommand(sSql, oConn).ExecuteReader();
+				while (rdReader.Read())
+				{
+					foreach(DataGridViewRow row in dgCustomers.Rows)
+                    {
+						if(row.Cells[0].Value.ToString() == rdReader["CustomerCode"].ToString())
+                        {
+							row.DefaultCellStyle.BackColor = Color.Red;
+                        }
+                    }
+				};
+				oConn.Dispose();
+			}
 		}
 
 		private void addDataGridLine(string [] aRecord)
@@ -106,7 +125,6 @@ namespace Liquid.Finder
 				dgCustomers.Focus();
 			}
 		}
-
 		private void cmdFilter_Click(object sender, EventArgs e)
 		{
 			loadCustomerGrid();
@@ -130,7 +148,6 @@ namespace Liquid.Finder
 
 		private void LoadCustomerNote()
 		{
-
 			bool bnote = false;
 			using (PsqlConnection oConn = new PsqlConnection(Liquid.Classes.Connect.LiquidConnectionString))
 			{
@@ -201,7 +218,6 @@ namespace Liquid.Finder
 			sFilter += " AND (IDNumber LIKE '%" + txtIDNumber.Text.Replace("'", "''") + "%' OR '" + txtIDNumber.Text.Replace("'", "''") + "' = '') ";           
 
 			bsSalesOrder.Filter = sFilter;
-
 		}
 
 		private void txtAccountCode_Enter(object sender, EventArgs e)
@@ -213,5 +229,5 @@ namespace Liquid.Finder
 		{
 			loadCustomerGrid();
 		}
-	}
+    }
 }

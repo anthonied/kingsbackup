@@ -54,7 +54,8 @@ namespace Liquid.Documents
         public Color[] aSalesOrderStatusColor = { Color.LimeGreen, Color.DarkCyan, Color.Orange, Color.Black };
         private ReportClass rptInvoice;
         public int iSalesOrderType;
-
+        private string nextSalesOrderNumber = "";
+        private string previousSalesOrderNumber = "";
         //Styles
         private readonly DataGridViewCellStyle _cssDowntimeRow = new DataGridViewCellStyle();
 
@@ -145,8 +146,7 @@ namespace Liquid.Documents
             dtContractDate.Enabled = false;
 
             cmdViewInvoiceMode.Visible = true;
-            var objTStip = (ToolStrip)crystalReportViewer1.Controls[4];
-            objTStip.Items[objTStip.Items.Count - 1].Visible = false;
+            
             ActiveControl = txtNumber;
             txtNumber.Focus();
             txtSalesCode.Text = Global.sLogedInUserCode;
@@ -437,9 +437,9 @@ namespace Liquid.Documents
             {
                 if (frmSalesZoom.ShowDialog() == DialogResult.OK)
                 {
-                    if (frmSalesZoom.sResult != "")
+                    if (frmSalesZoom.SelectedSalesOrderNumber != "")
                     {
-                        txtNumber.Text = frmSalesZoom.sResult.Trim();
+                        txtNumber.Text = frmSalesZoom.SelectedSalesOrderNumber.Trim();
                         txtNumber.SelectionStart = 0;
                         txtNumber.SelectionLength = txtNumber.Text.Length;
                         loadSalesOrder(txtNumber.Text);
@@ -448,6 +448,10 @@ namespace Liquid.Documents
                     }
                 }
                 Cursor = Cursors.Default;
+                nextButton.Visible = true;
+                previousButton.Visible = true;
+                nextClient.Visible = true;
+                previousClientDocument.Visible = true;
             }
         }
 
@@ -1860,7 +1864,7 @@ namespace Liquid.Documents
             cmdSaveOrder.Enabled = false;
             cmdViewMonthEnd.Visible = true;
             cmdRePrintDelNote.Visible = true;
-            crystalReportViewer1.ReportSource = null;
+            
             lblSalesOrder.Text = salesorderNumber;
             var bLoaded = false;
             //Clear current order
@@ -3401,6 +3405,78 @@ namespace Liquid.Documents
         private void cmdCancleLevy_Click(object sender, EventArgs e)
         {
             txtLevyPercentage.Text = "0";
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            using (var oConn = new PsqlConnection(Connect.PastelConnectionString))
+            {
+                oConn.Open();
+                var sSql = $" SELECT Top 1 DocumentNumber FROM HistoryHeader WHERE DocumentType in (102, 2) and DocumentNumber > '{txtNumber.Text}' ORDER BY DocumentNumber";
+                
+                var nextSalesOrder = Connect.getDataCommand(sSql, oConn).ExecuteScalar()?.ToString();
+
+                if (nextSalesOrder == null || nextSalesOrder == "")
+                    return;
+
+                loadSalesOrder(nextSalesOrder);
+                
+                oConn.Dispose();
+            }
+        }
+
+        private void previousButton_Click(object sender, EventArgs e)
+        {
+            using (var oConn = new PsqlConnection(Connect.PastelConnectionString))
+            {
+                oConn.Open();
+                var sSql = $" SELECT Top 1 DocumentNumber FROM HistoryHeader WHERE DocumentType in (102, 2) and DocumentNumber < '{txtNumber.Text}' ORDER BY DocumentNumber desc";
+
+                var previousSalesOrder = Connect.getDataCommand(sSql, oConn).ExecuteScalar()?.ToString();
+
+                if (previousSalesOrder == null || previousSalesOrder == "")
+                    return;
+
+                loadSalesOrder(previousSalesOrder);
+
+                oConn.Dispose();
+            }
+        }
+
+        private void previousClientDocument_Click(object sender, EventArgs e)
+        {
+            using (var oConn = new PsqlConnection(Connect.PastelConnectionString))
+            {
+                oConn.Open();
+                var sSql = $" SELECT Top 1 DocumentNumber FROM HistoryHeader WHERE DocumentType in (102, 2) and DocumentNumber < '{txtNumber.Text}' and CustomerCode = '{txtCustomerCode.Text}' ORDER BY DocumentNumber desc";
+
+                var previousSalesOrder = Connect.getDataCommand(sSql, oConn).ExecuteScalar()?.ToString();
+
+                if (previousSalesOrder == null || previousSalesOrder == "")
+                    return;
+
+                loadSalesOrder(previousSalesOrder);
+
+                oConn.Dispose();
+            }
+        }
+
+        private void nextClient_Click(object sender, EventArgs e)
+        {
+            using (var oConn = new PsqlConnection(Connect.PastelConnectionString))
+            {
+                oConn.Open();
+                var sSql = $" SELECT Top 1 DocumentNumber FROM HistoryHeader WHERE DocumentType in (102, 2) and DocumentNumber > '{txtNumber.Text}' and CustomerCode = '{txtCustomerCode.Text}' ORDER BY DocumentNumber";
+
+                var nextSalesOrder = Connect.getDataCommand(sSql, oConn).ExecuteScalar()?.ToString();
+
+                if (nextSalesOrder == null || nextSalesOrder == "")
+                    return;
+
+                loadSalesOrder(nextSalesOrder);
+
+                oConn.Dispose();
+            }
         }
 
         private void chkLinkMarketer_CheckedChanged(object sender, EventArgs e)

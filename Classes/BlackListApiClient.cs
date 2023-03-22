@@ -28,6 +28,20 @@ namespace Liquid.Classes
                 throw (ex);
             }
         }
+
+        public List<Fraudster> GetAllFraudRecords()
+        {
+            try
+            {
+                var _task = Task.Run(() => this.GetAllFraudRecordsAsync());
+                _task.Wait();
+                return _task.Result;
+            }
+            catch (Exception ex)
+            {
+                throw (ex);
+            }
+        }
        public  async Task<Fraudster> GetPossibleBlackListRecordAsync(string zaId)
         {
             string baseAddress = ConfigurationManager.AppSettings["KingsFraudAPI"];
@@ -44,6 +58,24 @@ namespace Liquid.Classes
                 fraudster = await response.Content.ReadAsAsync<Fraudster>();
             }
             return fraudster;
+        }
+
+        public async Task<List<Fraudster>> GetAllFraudRecordsAsync()
+        {
+            string baseAddress = ConfigurationManager.AppSettings["KingsFraudAPI"];
+            client.BaseAddress = new Uri(baseAddress);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+            List<Fraudster> fraudsters = new List<Fraudster>();
+
+            HttpResponseMessage response = await client.GetAsync($"fraudster/");
+            if (response.IsSuccessStatusCode)
+            {
+                fraudsters = await response.Content.ReadAsAsync<List<Fraudster>>();
+            }
+            return fraudsters;
         }
 
     }

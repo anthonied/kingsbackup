@@ -28,7 +28,7 @@ namespace Liquid.Finder
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerZoom));
             this.dgCustomers = new System.Windows.Forms.DataGridView();
             this.clNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +46,8 @@ namespace Liquid.Finder
             this.txtAccountCode = new System.Windows.Forms.TextBox();
             this.cmdFilter = new System.Windows.Forms.Button();
             this.lblAccountCode = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustomers)).BeginInit();
             this.gpFilters.SuspendLayout();
             this.SuspendLayout();
@@ -56,8 +58,8 @@ namespace Liquid.Finder
             this.dgCustomers.AllowUserToDeleteRows = false;
             this.dgCustomers.AllowUserToResizeColumns = false;
             this.dgCustomers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.GhostWhite;
-            this.dgCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.GhostWhite;
+            this.dgCustomers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCustomers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clNumber,
@@ -99,6 +101,8 @@ namespace Liquid.Finder
             // 
             // gpFilters
             // 
+            this.gpFilters.Controls.Add(this.label3);
+            this.gpFilters.Controls.Add(this.textBox1);
             this.gpFilters.Controls.Add(this.txtIDNumber);
             this.gpFilters.Controls.Add(this.txtTelephoneNumber);
             this.gpFilters.Controls.Add(this.label2);
@@ -236,6 +240,25 @@ namespace Liquid.Finder
             this.lblAccountCode.TabIndex = 0;
             this.lblAccountCode.Text = "Account Code";
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Red;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(439, 48);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(18, 20);
+            this.textBox1.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(463, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Fraud Entry";
+            // 
             // CustomerZoom
             // 
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
@@ -274,5 +297,7 @@ namespace Liquid.Finder
         private System.Windows.Forms.TextBox txtTelephoneNumber;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtAccountCode;
-	}
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
+    }
 }

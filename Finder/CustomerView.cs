@@ -15,6 +15,7 @@ using Liquid.Services.CrudServices.CustomerNotes;
 using Liquid.Services;
 using System.ComponentModel;
 using Liquid.Forms.Warnings;
+using Liquid.Forms.Customers;
 
 namespace Liquid.Finder
 {
@@ -298,9 +299,9 @@ namespace Liquid.Finder
                 Connect.getDataCommand(delSql, oConn).ExecuteNonQuery();
 
                 var sql =
-                    string.Format(@"INSERT INTO CustomerDetail (CustomerCode,ConsolidatedCustomer,DepositAccountCode)
-                                           VALUES ('{0}','{1}','{2}')", txtAccountCode.Text.Trim(),
-                        Convert.ToInt32(chkConsolidatedCustomer.Checked), txtDepositAccountCode.Text);
+                    string.Format(@"INSERT INTO CustomerDetail (CustomerCode,ConsolidatedCustomer,DepositAccountCode, FraudId)
+                                           VALUES ('{0}','{1}','{2}','{3}')", txtAccountCode.Text.Trim(),
+                        Convert.ToInt32(chkConsolidatedCustomer.Checked), txtDepositAccountCode.Text, txtFraudCode.Text);
 
                 Connect.getDataCommand(sql, oConn).ExecuteNonQuery();
                 oConn.Dispose();
@@ -702,7 +703,7 @@ namespace Liquid.Finder
             using (var oConn = new PsqlConnection(Connect.LiquidConnectionString))
             {
                 oConn.Open();
-                var sSql = "Select ConsolidatedCustomer, DepositAccountCode From CustomerDetail where CustomerCode = '" + txtAccountCode.Text.Trim() + "'";
+                var sSql = "Select ConsolidatedCustomer, DepositAccountCode, FraudId From CustomerDetail where CustomerCode = '" + txtAccountCode.Text.Trim() + "'";
                 try
                 {
                     var rdReader = Connect.getDataCommand(sSql,oConn).ExecuteReader();
@@ -710,12 +711,15 @@ namespace Liquid.Finder
                     {
                         chkConsolidatedCustomer.Checked = rdReader["ConsolidatedCustomer"].ToString() != "0";
                         txtDepositAccountCode.Text = rdReader["DepositAccountCode"].ToString();
+                        txtFraudCode.Text = rdReader["FraudId"].ToString();
+                        this.gbFraud.BackColor = txtFraudCode.Text.Trim() != "" ? Color.Red : SystemColors.Control;
                     }
                 }
                 catch
                 {
                     chkConsolidatedCustomer.Checked = false;
                     txtDepositAccountCode.Text = "";
+                    txtFraudCode.Text = "";
                 }
 
                 oConn.Dispose();
@@ -913,6 +917,9 @@ namespace Liquid.Finder
      
             var fraudster =  api.GetPossibleBlackListRecord(zaId);
 
+            if (fraudster == null)
+                return;
+            
             BlackListWarning frmBlackListWarning = new BlackListWarning(fraudster.Id.ToString());
             frmBlackListWarning.lblNameInfo.Text = fraudster.Alias;
             frmBlackListWarning.lblCustomerIdInfo.Text = fraudster.ZaId.ToString() ;
@@ -921,10 +928,8 @@ namespace Liquid.Finder
             frmBlackListWarning.lblSurnameInfo.Text = fraudster.Surname.ToString() ;
             frmBlackListWarning.lblEmailInfo.Text = fraudster.Email.ToString() ;
             frmBlackListWarning.lblCodeInfo.Text = fraudster.Code.ToString() ;
-
-            
-            frmBlackListWarning.ShowDialog();
-          
+                        
+            frmBlackListWarning.ShowDialog();          
         }
 
 
@@ -1086,6 +1091,18 @@ namespace Liquid.Finder
             txtDelAd2.Text = txtPostAd2.Text;
             txtDelAd3.Text = txtPostAd3.Text;
             txtDelAd4.Text = txtPostAd4.Text;
-        }        
+        }
+
+        private void cmdNew_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            using (var walkinCustomerForm = new WalkInCustomer())
+            {
+                if (walkinCustomerForm.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+            }
+        }
     }
 }

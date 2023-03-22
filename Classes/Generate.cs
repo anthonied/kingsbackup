@@ -491,7 +491,7 @@ namespace Liquid.Classes
 
         private static void convertToPdfAndPrint(List<ReportClass> reports, List<string> refNumbers, string refName, int salesOrderAmount = 1)
         {
-            
+
             if (!Directory.Exists(Application.StartupPath + "\\Temp"))
             {
                 Directory.CreateDirectory(Application.StartupPath + "\\Temp");
@@ -499,26 +499,30 @@ namespace Liquid.Classes
             var reportName = "";
             //suppress Copy watermark for first copy
             int deliveryIndex = 0;
+            var reportFileName = Application.StartupPath + $"\\Temp\\{refName}_{DateTime.Now.ToString("ddMMyyHHmmss")}";
+            List<string> reportsToPrint = new List<string>();
+
             reports.ForEach(reportDelivery =>
             {
-                reportDelivery.ReportDefinition.Sections[1].SectionFormat.EnableSuppress = true;
-                reportName = Application.StartupPath + $"\\Temp\\{refName}{refNumbers[deliveryIndex]}.pdf";
-                var copyNumber = 1;
-                while (File.Exists(reportName))
-                {
-                    reportName = $"{Application.StartupPath}\\Temp\\{refName}{refNumbers[deliveryIndex]} ({copyNumber}).pdf";
-                    copyNumber++;
-                }
-                reportDelivery.ExportToDisk(ExportFormatType.PortableDocFormat, reportName);
+            reportDelivery.ReportDefinition.Sections[1].SectionFormat.EnableSuppress = true;
+            reportName = $"{reportFileName}_{refNumbers[deliveryIndex]}";
+            var copyNumber = 1;
+            while (File.Exists(reportName))
+            {
+                reportName = $"{reportFileName}_{refNumbers[deliveryIndex]} ({copyNumber})";
+                copyNumber++;
+            }
+            reportsToPrint.Add(reportName);
+            reportDelivery.ExportToDisk(ExportFormatType.PortableDocFormat, $"{reportName}.pdf");
                 var reportDeliveryCopy = new ReportClass();
                 reportDeliveryCopy = reportDelivery;
                 //show Copy Watermark
                 reportDeliveryCopy.ReportDefinition.Sections[1].SectionFormat.EnableSuppress = false;
-                var reportCopyName = Application.StartupPath + $"\\Temp\\{refName}Copy{refNumbers[deliveryIndex]}.pdf";
+                var reportCopyName = $"{reportName}Copy.pdf";
                 var copyCopyNumber = 1;
                 while (File.Exists(reportCopyName))
                 {
-                    reportCopyName = $"{Application.StartupPath}\\Temp\\{refName}Copy{refNumbers[deliveryIndex]} ({copyCopyNumber}).pdf";
+                    reportCopyName = $"{reportName}Copy ({copyCopyNumber}).pdf";
                     copyCopyNumber++;
                 }
                 reportDeliveryCopy.ExportToDisk(ExportFormatType.PortableDocFormat, reportCopyName);
@@ -530,7 +534,7 @@ namespace Liquid.Classes
                 using (var outputDocument = new PdfDocument())
                 {
                     var filename = "";
-                    
+                    var reportIndex = 0;
                     //merge terms and conditions with report
                     try
                         {
@@ -545,7 +549,8 @@ namespace Liquid.Classes
                                     if (pageIndex % 4 == 0) //1st page
                                     {
                                         deliveryIndex = pageIndex / 4;
-                                        inputDocument = PdfReader.Open(Application.StartupPath + $"\\Temp\\{refName}{refNumbers[deliveryIndex]}.pdf", PdfDocumentOpenMode.Import);
+                                        inputDocument = PdfReader.Open($"{reportsToPrint[reportIndex]}.pdf", PdfDocumentOpenMode.Import);
+                                        
                                     }
                                     else if (pageIndex % 2 != 0) //odd
                                     {
@@ -561,8 +566,9 @@ namespace Liquid.Classes
                                     }
                                     else if (pageIndex % 2 == 0) //even
                                     {
-                                        inputDocument = PdfReader.Open(Application.StartupPath + $"\\Temp\\{refName}Copy{refNumbers[deliveryIndex]}.pdf", PdfDocumentOpenMode.Import);
-                                    }
+                                        inputDocument = PdfReader.Open($"{reportsToPrint[reportIndex]}Copy.pdf", PdfDocumentOpenMode.Import);
+                                        reportIndex++;
+                                }
                                     // Get the page from the external document...
                                     var page = inputDocument.Pages[0];
                                     // ...and add it to the output document.
@@ -579,18 +585,18 @@ namespace Liquid.Classes
                         {
                             MessageBox.Show("Error Merging PDF Files, Please verify path of attached pictures.");
                         }
-                
 
+                    
                     // Save the document...
                     try
                     {
-                        filename = Application.StartupPath + $"\\Temp\\Temp{refName}{refNumbers[0]} -{refNumbers[refNumbers.Count - 1]} .pdf"; //Application.StartupPath + "\\Qoutes\\" + sDocumentNumber +".pdf";
+                        filename = $"{reportFileName}.pdf";
                         outputDocument.Save(filename);
                         Process.Start(filename);
                     }
                     catch(Exception ex)
                     {
-                        MessageBox.Show("Error saving file to directory, please verify path in Company Setup");
+                        MessageBox.Show($"Error saving file to directory, please verify path in Company Setup - {ex.Message}");
                     }
                 }
 

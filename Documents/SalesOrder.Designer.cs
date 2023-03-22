@@ -209,6 +209,13 @@ namespace Liquid.Documents
             this.txtMessage1 = new System.Windows.Forms.TextBox();
             this.tcPortal = new System.Windows.Forms.TabControl();
             this.tpSalesOrder = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.previousClientDocument = new System.Windows.Forms.Button();
+            this.nextClient = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.previousButton = new System.Windows.Forms.Button();
+            this.nextButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmdCancleLevy = new System.Windows.Forms.Button();
             this.txtLevyPercentage = new System.Windows.Forms.TextBox();
@@ -339,6 +346,7 @@ namespace Liquid.Documents
             this.panel1.SuspendLayout();
             this.tcPortal.SuspendLayout();
             this.tpSalesOrder.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRepeatAmount)).BeginInit();
             this.grpAudit.SuspendLayout();
@@ -358,7 +366,7 @@ namespace Liquid.Documents
             // lblNumber
             // 
             this.lblNumber.AutoSize = true;
-            this.lblNumber.Location = new System.Drawing.Point(423, 5);
+            this.lblNumber.Location = new System.Drawing.Point(426, 5);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(44, 13);
             this.lblNumber.TabIndex = 0;
@@ -367,7 +375,7 @@ namespace Liquid.Documents
             // txtNumber
             // 
             this.txtNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumber.Location = new System.Drawing.Point(473, 1);
+            this.txtNumber.Location = new System.Drawing.Point(476, 1);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(75, 20);
             this.txtNumber.TabIndex = 1;
@@ -1085,7 +1093,7 @@ namespace Liquid.Documents
             this.grpOrderActions.Controls.Add(this.cmdSaveOrder);
             this.grpOrderActions.Location = new System.Drawing.Point(10, 0);
             this.grpOrderActions.Name = "grpOrderActions";
-            this.grpOrderActions.Size = new System.Drawing.Size(410, 67);
+            this.grpOrderActions.Size = new System.Drawing.Size(387, 67);
             this.grpOrderActions.TabIndex = 8;
             this.grpOrderActions.TabStop = false;
             this.grpOrderActions.Text = "Actions";
@@ -2220,6 +2228,7 @@ namespace Liquid.Documents
             // tpSalesOrder
             // 
             this.tpSalesOrder.BackColor = System.Drawing.Color.LemonChiffon;
+            this.tpSalesOrder.Controls.Add(this.groupBox2);
             this.tpSalesOrder.Controls.Add(this.groupBox1);
             this.tpSalesOrder.Controls.Add(this.lblDuplicateSaleOrderPart2);
             this.tpSalesOrder.Controls.Add(this.numRepeatAmount);
@@ -2281,6 +2290,95 @@ namespace Liquid.Documents
             this.tpSalesOrder.Size = new System.Drawing.Size(1145, 707);
             this.tpSalesOrder.TabIndex = 0;
             this.tpSalesOrder.Text = "Sales Order";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.previousClientDocument);
+            this.groupBox2.Controls.Add(this.nextClient);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.previousButton);
+            this.groupBox2.Controls.Add(this.nextButton);
+            this.groupBox2.Location = new System.Drawing.Point(777, 624);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(176, 72);
+            this.groupBox2.TabIndex = 191;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Navigation";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(72, 49);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(33, 13);
+            this.label20.TabIndex = 195;
+            this.label20.Text = "Client";
+            // 
+            // previousClientDocument
+            // 
+            this.previousClientDocument.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.previousClientDocument.FlatAppearance.BorderSize = 0;
+            this.previousClientDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.previousClientDocument.Image = global::Liquid.Properties.Resources.nav_left_blue;
+            this.previousClientDocument.Location = new System.Drawing.Point(14, 42);
+            this.previousClientDocument.Name = "previousClientDocument";
+            this.previousClientDocument.Size = new System.Drawing.Size(24, 24);
+            this.previousClientDocument.TabIndex = 193;
+            this.previousClientDocument.UseVisualStyleBackColor = true;
+            this.previousClientDocument.Visible = false;
+            this.previousClientDocument.Click += new System.EventHandler(this.previousClientDocument_Click);
+            // 
+            // nextClient
+            // 
+            this.nextClient.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextClient.FlatAppearance.BorderSize = 0;
+            this.nextClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextClient.Image = global::Liquid.Properties.Resources.nav_right_blue;
+            this.nextClient.Location = new System.Drawing.Point(133, 38);
+            this.nextClient.Name = "nextClient";
+            this.nextClient.Size = new System.Drawing.Size(36, 33);
+            this.nextClient.TabIndex = 194;
+            this.nextClient.UseVisualStyleBackColor = true;
+            this.nextClient.Visible = false;
+            this.nextClient.Click += new System.EventHandler(this.nextClient_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(55, 21);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 13);
+            this.label16.TabIndex = 192;
+            this.label16.Text = "Delivery Note";
+            // 
+            // previousButton
+            // 
+            this.previousButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.previousButton.FlatAppearance.BorderSize = 0;
+            this.previousButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.previousButton.Image = global::Liquid.Properties.Resources.nav_left_blue;
+            this.previousButton.Location = new System.Drawing.Point(14, 14);
+            this.previousButton.Name = "previousButton";
+            this.previousButton.Size = new System.Drawing.Size(24, 24);
+            this.previousButton.TabIndex = 187;
+            this.previousButton.UseVisualStyleBackColor = true;
+            this.previousButton.Visible = false;
+            this.previousButton.Click += new System.EventHandler(this.previousButton_Click);
+            // 
+            // nextButton
+            // 
+            this.nextButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nextButton.FlatAppearance.BorderSize = 0;
+            this.nextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextButton.Image = global::Liquid.Properties.Resources.nav_right_blue;
+            this.nextButton.Location = new System.Drawing.Point(133, 10);
+            this.nextButton.Name = "nextButton";
+            this.nextButton.Size = new System.Drawing.Size(36, 33);
+            this.nextButton.TabIndex = 190;
+            this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Visible = false;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // groupBox1
             // 
@@ -2871,7 +2969,7 @@ namespace Liquid.Documents
             this.cmdSearchNumber.BackColor = System.Drawing.Color.White;
             this.cmdSearchNumber.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmdSearchNumber.Image = global::Liquid.Properties.Resources.view1;
-            this.cmdSearchNumber.Location = new System.Drawing.Point(548, 0);
+            this.cmdSearchNumber.Location = new System.Drawing.Point(551, 0);
             this.cmdSearchNumber.Name = "cmdSearchNumber";
             this.cmdSearchNumber.Size = new System.Drawing.Size(25, 23);
             this.cmdSearchNumber.TabIndex = 31;
@@ -3103,6 +3201,8 @@ namespace Liquid.Documents
             this.tcPortal.ResumeLayout(false);
             this.tpSalesOrder.ResumeLayout(false);
             this.tpSalesOrder.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRepeatAmount)).EndInit();
@@ -3152,7 +3252,8 @@ namespace Liquid.Documents
 		private System.Windows.Forms.Panel pnlDeliveryDateValue;
 		private System.Windows.Forms.Panel pnlDiscountValue;
 		private System.Windows.Forms.Panel pnlDateValue;
-		private System.Windows.Forms.Panel pnlPeriodValue;
+     
+        private System.Windows.Forms.Panel pnlPeriodValue;
 		private System.Windows.Forms.Label lblDate;
 		private System.Windows.Forms.Label lblSalesCode;
 		private System.Windows.Forms.Label lblDiscount;
@@ -3384,5 +3485,12 @@ namespace Liquid.Documents
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtLevyPercentage;
         private System.Windows.Forms.Button cmdCancleLevy;
+        private System.Windows.Forms.Button nextButton;
+        private System.Windows.Forms.Button previousButton;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button previousClientDocument;
+        private System.Windows.Forms.Button nextClient;
+        private System.Windows.Forms.Label label16;
     }
 }
