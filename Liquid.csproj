@@ -500,6 +500,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Domain\ItemPriceUpdater.cs" />
+    <Compile Include="Domain\TempCustomer.cs" />
     <Compile Include="Finder\JobCodeZoom.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -4,7 +4,7 @@
   <description asmv2:iconFile="icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Liquid" version="4.39.0.23941" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="Liquid" version="4.39.0.23192" language="neutral" processorArchitecture="x86" />
     <commandLine file="Liquid.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -283,14 +283,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Liquid.exe" size="15003648">
-      <assemblyIdentity name="Liquid" version="4.39.0.23941" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Liquid.exe" size="15006208">
+      <assemblyIdentity name="Liquid" version="4.39.0.23192" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qsmjJ2Y65OYsQfuMO4//6QbDD1x+tzz7h7OoUjWFwAI=</dsig:DigestValue>
+        <dsig:DigestValue>hRlGRfTSB78ELZ7Np+YJk5647UW4qRMaBbBCPg2bB6s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

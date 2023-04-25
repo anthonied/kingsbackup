@@ -34,11 +34,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.dgFraudList = new System.Windows.Forms.DataGridView();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.txtMobile = new System.Windows.Forms.TextBox();
-            this.lblMobile = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.ZaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNaam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,12 +44,18 @@
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Alias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chkShouldFilter = new System.Windows.Forms.CheckBox();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.cmdFilter = new System.Windows.Forms.Button();
+            this.cmdCreate = new System.Windows.Forms.Button();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCreate = new System.Windows.Forms.Button();
+            this.txtMobile = new System.Windows.Forms.TextBox();
+            this.lblMobile = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.cmdCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgFraudList)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
@@ -110,7 +111,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgFraudList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgFraudList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgFraudList.Location = new System.Drawing.Point(0, 180);
+            this.dgFraudList.Location = new System.Drawing.Point(0, 145);
             this.dgFraudList.Name = "dgFraudList";
             this.dgFraudList.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -121,65 +122,8 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgFraudList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgFraudList.Size = new System.Drawing.Size(1249, 584);
+            this.dgFraudList.Size = new System.Drawing.Size(1249, 619);
             this.dgFraudList.TabIndex = 117;
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlHeader.Controls.Add(this.txtCreate);
-            this.pnlHeader.Controls.Add(this.txtSurname);
-            this.pnlHeader.Controls.Add(this.label1);
-            this.pnlHeader.Controls.Add(this.txtName);
-            this.pnlHeader.Controls.Add(this.label2);
-            this.pnlHeader.Controls.Add(this.txtMobile);
-            this.pnlHeader.Controls.Add(this.lblMobile);
-            this.pnlHeader.Controls.Add(this.txtEmail);
-            this.pnlHeader.Controls.Add(this.lblEmail);
-            this.pnlHeader.Controls.Add(this.txtID);
-            this.pnlHeader.Controls.Add(this.lblId);
-            this.pnlHeader.Location = new System.Drawing.Point(12, 12);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(711, 146);
-            this.pnlHeader.TabIndex = 118;
-            // 
-            // txtMobile
-            // 
-            this.txtMobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMobile.Location = new System.Drawing.Point(104, 90);
-            this.txtMobile.MaxLength = 16;
-            this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(154, 20);
-            this.txtMobile.TabIndex = 119;
-            // 
-            // lblMobile
-            // 
-            this.lblMobile.AutoSize = true;
-            this.lblMobile.Location = new System.Drawing.Point(12, 93);
-            this.lblMobile.Name = "lblMobile";
-            this.lblMobile.Size = new System.Drawing.Size(72, 13);
-            this.lblMobile.TabIndex = 120;
-            this.lblMobile.Text = "Mobile Phone";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Location = new System.Drawing.Point(104, 53);
-            this.txtEmail.MaxLength = 50;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(154, 20);
-            this.txtEmail.TabIndex = 117;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(12, 56);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(73, 13);
-            this.lblEmail.TabIndex = 118;
-            this.lblEmail.Text = "Email Address";
             // 
             // ZaId
             // 
@@ -259,32 +203,62 @@
             this.ColType.ReadOnly = true;
             this.ColType.Visible = false;
             // 
-            // chkShouldFilter
+            // pnlHeader
             // 
-            this.chkShouldFilter.AutoSize = true;
-            this.chkShouldFilter.Checked = true;
-            this.chkShouldFilter.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkShouldFilter.Location = new System.Drawing.Point(1117, 140);
-            this.chkShouldFilter.Name = "chkShouldFilter";
-            this.chkShouldFilter.Size = new System.Drawing.Size(83, 17);
-            this.chkShouldFilter.TabIndex = 119;
-            this.chkShouldFilter.Text = "Filter Entries";
-            this.chkShouldFilter.UseVisualStyleBackColor = true;
-            this.chkShouldFilter.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.pnlHeader.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlHeader.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlHeader.Controls.Add(this.cmdCancel);
+            this.pnlHeader.Controls.Add(this.cmdFilter);
+            this.pnlHeader.Controls.Add(this.cmdCreate);
+            this.pnlHeader.Controls.Add(this.txtSurname);
+            this.pnlHeader.Controls.Add(this.label1);
+            this.pnlHeader.Controls.Add(this.txtName);
+            this.pnlHeader.Controls.Add(this.label2);
+            this.pnlHeader.Controls.Add(this.txtMobile);
+            this.pnlHeader.Controls.Add(this.lblMobile);
+            this.pnlHeader.Controls.Add(this.txtEmail);
+            this.pnlHeader.Controls.Add(this.lblEmail);
+            this.pnlHeader.Controls.Add(this.txtID);
+            this.pnlHeader.Controls.Add(this.lblId);
+            this.pnlHeader.Location = new System.Drawing.Point(12, 12);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1225, 127);
+            this.pnlHeader.TabIndex = 118;
+            // 
+            // cmdFilter
+            // 
+            this.cmdFilter.Location = new System.Drawing.Point(971, 56);
+            this.cmdFilter.Name = "cmdFilter";
+            this.cmdFilter.Size = new System.Drawing.Size(106, 23);
+            this.cmdFilter.TabIndex = 126;
+            this.cmdFilter.Text = "Filter";
+            this.cmdFilter.UseVisualStyleBackColor = true;
+            this.cmdFilter.Click += new System.EventHandler(this.cmdFilter_Click);
+            // 
+            // cmdCreate
+            // 
+            this.cmdCreate.Location = new System.Drawing.Point(971, 85);
+            this.cmdCreate.Name = "cmdCreate";
+            this.cmdCreate.Size = new System.Drawing.Size(225, 23);
+            this.cmdCreate.TabIndex = 125;
+            this.cmdCreate.Text = "Create";
+            this.cmdCreate.UseVisualStyleBackColor = true;
+            this.cmdCreate.Click += new System.EventHandler(this.cmdCreate_Click);
             // 
             // txtSurname
             // 
             this.txtSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSurname.Location = new System.Drawing.Point(382, 90);
+            this.txtSurname.Location = new System.Drawing.Point(383, 90);
             this.txtSurname.MaxLength = 16;
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(154, 20);
+            this.txtSurname.Size = new System.Drawing.Size(217, 20);
             this.txtSurname.TabIndex = 123;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(290, 93);
+            this.label1.Location = new System.Drawing.Point(291, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 124;
@@ -293,48 +267,83 @@
             // txtName
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Location = new System.Drawing.Point(382, 53);
+            this.txtName.Location = new System.Drawing.Point(383, 53);
             this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(154, 20);
+            this.txtName.Size = new System.Drawing.Size(217, 20);
             this.txtName.TabIndex = 121;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(290, 56);
+            this.label2.Location = new System.Drawing.Point(291, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 122;
             this.label2.Text = "Name";
             // 
-            // txtCreate
+            // txtMobile
             // 
-            this.txtCreate.Location = new System.Drawing.Point(600, 87);
-            this.txtCreate.Name = "txtCreate";
-            this.txtCreate.Size = new System.Drawing.Size(93, 23);
-            this.txtCreate.TabIndex = 125;
-            this.txtCreate.Text = "Create";
-            this.txtCreate.UseVisualStyleBackColor = true;
+            this.txtMobile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMobile.Location = new System.Drawing.Point(104, 53);
+            this.txtMobile.MaxLength = 16;
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(154, 20);
+            this.txtMobile.TabIndex = 119;
+            // 
+            // lblMobile
+            // 
+            this.lblMobile.AutoSize = true;
+            this.lblMobile.Location = new System.Drawing.Point(12, 56);
+            this.lblMobile.Name = "lblMobile";
+            this.lblMobile.Size = new System.Drawing.Size(72, 13);
+            this.lblMobile.TabIndex = 120;
+            this.lblMobile.Text = "Mobile Phone";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Location = new System.Drawing.Point(383, 16);
+            this.txtEmail.MaxLength = 50;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(217, 20);
+            this.txtEmail.TabIndex = 117;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(291, 19);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(73, 13);
+            this.lblEmail.TabIndex = 118;
+            this.lblEmail.Text = "Email Address";
+            // 
+            // cmdCancel
+            // 
+            this.cmdCancel.Location = new System.Drawing.Point(1090, 56);
+            this.cmdCancel.Name = "cmdCancel";
+            this.cmdCancel.Size = new System.Drawing.Size(106, 23);
+            this.cmdCancel.TabIndex = 127;
+            this.cmdCancel.Text = "Cancel";
+            this.cmdCancel.UseVisualStyleBackColor = true;
+            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
             // 
             // WalkInCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1249, 764);
-            this.Controls.Add(this.chkShouldFilter);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.dgFraudList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "WalkInCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WalkInCustomer";
+            this.Text = "New Customer";
             this.Load += new System.EventHandler(this.WalkInCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgFraudList)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -359,11 +368,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn Alias;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColType;
-        private System.Windows.Forms.CheckBox chkShouldFilter;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button txtCreate;
+        private System.Windows.Forms.Button cmdCreate;
+        private System.Windows.Forms.Button cmdFilter;
+        private System.Windows.Forms.Button cmdCancel;
     }
 }
