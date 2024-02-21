@@ -1,7 +1,8 @@
 ﻿namespace Liquid.Datasets
 {
-    
-    
-    public partial class dsPickingSlip {
+
+
+    public partial class dsPickingSlip
+    {
     }
 }

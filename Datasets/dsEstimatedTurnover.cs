@@ -1,8 +1,9 @@
 ﻿namespace Liquid.Datasets
 {
-    
-    
-    public partial class dsEstimatedTurnover {
+
+
+    public partial class dsEstimatedTurnover
+    {
     }
 }
 namespace Liquid.Datasets {

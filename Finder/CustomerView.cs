@@ -1100,7 +1100,10 @@ namespace Liquid.Finder
             {
                 if (walkinCustomerForm.ShowDialog() == DialogResult.OK)
                 {
-
+                    var tempCustomer = walkinCustomerForm.TempCustomer;
+                    txtID.Text = tempCustomer.IdNumber;
+                    txtEmail.Text = tempCustomer.Email;
+                    txtMobile.Text = tempCustomer.Phone;
                 }
             }
         }

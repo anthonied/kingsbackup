@@ -1,7 +1,8 @@
 ﻿namespace Liquid.Datasets
 {
-    
-    
-    public partial class dsAvgTurnoverPerCust {
+
+
+    public partial class dsAvgTurnoverPerCust
+    {
     }
 }

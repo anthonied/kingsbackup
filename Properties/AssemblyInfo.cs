@@ -28,6 +28,6 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("4.39.0.*")]
-[assembly: AssemblyFileVersion("4.39.0.0")]
+[assembly: AssemblyVersion("4.40.0.*")]
+[assembly: AssemblyFileVersion("4.40.0.0")]
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "C:\\LogConfigs\\LiquidPastel.config", Watch = true)]

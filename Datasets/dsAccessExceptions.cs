@@ -1,7 +1,8 @@
 ﻿namespace Liquid.Datasets
 {
-    
-    
-    public partial class dsAccessExceptions {
+
+
+    public partial class dsAccessExceptions
+    {
     }
 }

@@ -1,7 +1,8 @@
 ﻿namespace Liquid.Datasets
 {
-    
-    
-    public partial class dsRawItemLevel {
+
+
+    public partial class dsRawItemLevel
+    {
     }
 }
